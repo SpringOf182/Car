@@ -1,0 +1,64 @@
+/* pages/find/find.wxss */
+@import "templete/order-find-templete.wxss";
+page{
+  background:
+		-webkit-gradient(linear,left top,left bottom,from(#038573),to(#FfFFFF));
+    background-repeat: no-repeat;
+}
+.main-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:90%;
+  margin: auto;
+  font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+}
+.select-container{
+  margin-block-start:7%;
+  border-bottom: solid 4rpx #038573;
+  border-radius: 12rpx;
+}
+.select-title{
+	display: flex;
+	flex-direction: row;
+}
+.screen-text{
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.screen{
+  display:flex;
+  flex-direction: row;
+  font-stretch: ultra-condensed;
+  margin:auto;
+}
+
+.screen-picker{
+  color:#000000;
+  background-color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin:10rpx auto 20rpx auto;
+  height: 45rpx;
+  width: 48%;
+  border-radius: 12rpx;
+}
+#pickerC{
+	width: 54%;
+	margin:10rpx auto 20rpx 5rpx;
+}
+.confirm-button{
+	background-color: rgba(255,255,255,0.3);
+	font-size: 0.8em;
+	color: #ffffff;
+  margin:10rpx 10rpx 20rpx auto;
+}
+.image-more{
+  height: 35rpx;
+  width: 35rpx;
+  text-align: right;
+}

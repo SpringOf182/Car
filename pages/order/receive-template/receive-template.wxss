@@ -1,0 +1,59 @@
+.card-container{
+  margin:10rpx auto 10rpx auto;
+  padding:10rpx;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12rpx;
+  font-size: 0.8em;
+  border-top:  solid 2rpx #038573;
+}
+
+.upper-container{
+  display: flex;
+  flex-direction: row;
+}
+.receive-detail{
+  margin:auto 20rpx auto auto;
+  width: 100rpx;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1rpx solid #038573;
+  border-radius: 20rpx;
+}
+.user-container{
+  margin:20rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  width:16%
+}
+.userImage{
+  margin:auto;
+  overflow: hidden;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+.userName{
+  margin:auto;
+  font-size: 1.2em;
+}
+.info-container{
+  margin:10rpx auto 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+.info-text{
+  margin-bottom: 10rpx;
+  padding: 5rpx;
+}
+.price-text{
+  font-size: 2em;
+  margin: auto;
+}
+.accomplish-button{
+  margin:auto 20rpx auto auto;
+  width:20%;
+  background-color: #06a893;
+  color: #ffffff;
+  font-size: 1em;
+}

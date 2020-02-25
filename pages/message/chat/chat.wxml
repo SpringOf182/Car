@@ -1,0 +1,32 @@
+<scroll-view scroll-y="true" style="height: 90%;" scroll-into-view="{{toLast}}">
+<view class="message-container">
+	<!--<block wx:for="{{messageRecord}}" wx:for-index="index" wx:for-item="item" wx:key="key" id="item{{index+1}}">-->
+	<block wx:for="{{messageRecord}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+		<view wx:if="{{item.isMine}}">
+			<view class="my-message-container">
+				<view class="content">
+					<view class="my-message-time">{{item.time}}</view>
+					<text class="my-message-content">{{item.message}}</text>
+				</view>
+				<view class="avatar">
+					<open-data type="userAvatarUrl"></open-data>
+				</view>
+			</view>
+		</view>
+		<view wx:else>
+			<view class="other-message-container">
+				<image src="{{portraitUrl}}" class="avatar"></image>
+				<view class="content">
+					<view class="other-message-time">{{item.time}}</view>
+					<text class="other-message-content">{{item.message}}</text>
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
+</scroll-view>
+<view class="send-container">
+	<input placeholder="请输入聊天内容" value="{{currentMessage}}" bindblur="inputMessage" class="input-box"></input>
+	<view class="add" bindtap='increase'>+</view> 
+	<button type="default" bindtap='sendMessage' formType="reset" size="small" button-hover="blue">发送</button>
+</view>

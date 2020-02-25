@@ -1,0 +1,9 @@
+/* pages/message/message.wxss */
+@import "chatCard-template/chatCard-template.wxss";
+page{
+	/*background-color: #f4f4f4;*/
+  background:
+		-webkit-gradient(linear,left top,left bottom,from(#2e8f96),to(#FfFFFF));
+    background-repeat: no-repeat;
+  font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+}

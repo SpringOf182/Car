@@ -1,0 +1,54 @@
+/* pages/mine/about/about.wxss */
+page{
+  position: relative;
+  height: 100%;
+}
+.main-container{
+  display: flex;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  flex-direction: column;
+}
+.top-container{
+  border-top: 2rpx #f0f0f0 solid;
+  width: 100%;
+  text-align: center;
+}
+.logo-image{
+  width: 250rpx;
+  height: 250rpx;
+  margin-top: 128rpx;
+  overflow: hide;
+  border-radius: 50%;
+}
+.logo-name{
+  color: black;
+  font-size: 36rpx;
+  margin-top: 60rpx;
+  font-weight: bold;
+}
+.logo-version{
+  color: black;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+.more-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 100rpx;
+  border-bottom: 1px solid #F0F0F0;
+  margin-top: 50rpx;
+}
+.more-text {
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #000000;
+}
+.right-img{
+	height: 30rpx;
+	width:20rpx;
+	margin: auto 0rpx auto auto;
+}

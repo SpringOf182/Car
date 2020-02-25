@@ -1,0 +1,55 @@
+/* pages/order/order.wxss */
+@import "release-template/release-template.wxss";
+@import "receive-template/receive-template.wxss";
+page{
+  background:
+		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));
+    background-repeat: no-repeat;
+  font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+}
+.list-empty{
+	margin:auto;
+	text-align: center;
+	font-size: 1.2em;
+	color:antiquewhite;
+	margin-block-start:8%;
+}
+.main-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:90%;
+  margin: auto;
+}
+.title-container{
+  display: flex;
+  flex-direction: row;
+}
+.choose-container{
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx auto 10rpx auto;
+  width: 50%;
+}
+.title-text{
+  margin: auto;
+  color: #FfFFFF;
+}
+.choose-tag{
+  left: 36rpx;
+  height: 8rpx;
+  width: 42rpx;
+  background-color: #4beb8d;
+  margin: 10rpx auto auto auto;
+}
+.publish-button{
+	position: fixed;
+	bottom: 30rpx;
+	color:#FfFFFF;
+	background-color: #079c9a;
+	margin-block-start:95%;
+	font-size: 0.9em;
+	width:90%;
+}

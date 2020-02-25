@@ -1,0 +1,6 @@
+<import src="chatCard-template/chatCard-template.wxml"/>
+<view class="main-container">
+	<block wx:for="{{chatCardList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+      <template is="chatCardItem" data="{{...item}}"/>
+   </block>
+</view>

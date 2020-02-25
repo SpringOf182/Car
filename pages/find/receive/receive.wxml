@@ -1,0 +1,22 @@
+<!--pages/find/receive/receive.wxml-->
+<view class="card-container">
+  <view class="upper-container">
+    <view class="user-container">
+      <image class='userImage' src="{{receiveDetail.image}}"></image>
+      <view class="userName">{{receiveDetail.userName}}</view>
+    </view>
+     <view class="info-container">
+      <view class="info-text">取件点：{{receiveDetail.pickUp}}</view>
+      <view class="info-text">送达点：{{receiveDetail.delivery}}</view>
+      <view class="info-text">重量：{{receiveDetail.weight}}</view>
+      <view class="info-text">价格：￥{{receiveDetail.price}}</view>
+      <view class="info-text">截止时间：{{receiveDetail.latestTime}}</view>
+      <view class="info-text" catchtap="">发单人：{{receiveDetail.releaserName}}</view>
+      <view class="info-text">备注：{{receiveDetail.memo}}</view>
+    </view>
+  </view>
+  <view class="lower-container">
+  </view>
+  <input type="number" placeholder="请输入您的联系电话" bindblur="getPhoneNumber" class="input-phone"></input>
+  <button class="accomplish-button" catchtap="receiveOrder">完成</button>
+</view>

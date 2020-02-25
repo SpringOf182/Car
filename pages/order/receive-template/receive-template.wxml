@@ -1,0 +1,25 @@
+<template name="myReceive">
+<block wx:if="{{releaseOrderList}}">
+	<view class="list-empty">您暂未发布订单</view>
+</block>
+<block wx:else>
+	<view class="card-container">
+	<view class="receive-detail" catchtap="onReceiveMoreTap" data-orderId="{{OID}}">详情</view>
+	<view class="upper-container">
+		<view class="user-container">
+			<image class='userImage' src="{{image}}"></image>
+			<view class="userName">{{userName}}</view>
+		</view>
+		<view class="info-container">
+			<view class="info-text">订单号：{{OID}}</view>
+			<view class="info-text">取件点：{{pickUp}}</view>
+			<view class="info-text">验证码：{{verificationCode}}</view>
+			<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+		</view>
+	</view>
+	<view class="lower-container" wx:if="{{isComplete}}">
+	<button class="accomplish-button" catchtap="receive-order">完成</button>
+	</view>
+	</view>
+</block>
+</template>

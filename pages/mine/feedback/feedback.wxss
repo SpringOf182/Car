@@ -1,0 +1,44 @@
+/* pages/mine/feedback/feedback.wxss */
+textarea {
+  width: 670rpx;
+  height: 300rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+.notice {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #808080;
+}
+.areas {
+  background-color: #f5f5f5;
+  padding: 10rpx;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+
+.title {
+  font-size: 38rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  color: black;
+}
+
+.post {
+  position: relative;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #287af6;
+  color: white;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 38rpx;
+  border-radius: 8rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+}

@@ -1,0 +1,90 @@
+/* pages/order/publish/publish.wxss */
+page{
+  	background:
+		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));
+	background-repeat: no-repeat;
+  	font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+  	color: #353535fd;
+  text-align: center;
+}
+.main-container{
+	width: 90%;
+	margin:auto;
+	margin-top:100rpx;
+}
+.line-container{
+	display: flex;
+	flex-direction: row;
+	height:60rpx;
+	margin-bottom:10rpx;
+}
+.time-container{
+	display: flex;
+	flex-direction: row;
+}
+.tag-name{
+	width:200rpx;
+	text-align: left;
+	padding-left: 10rpx;
+	padding-bottom: 2rpx;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 12rpx;
+	height:60rpx;
+}
+.tag-content{
+	margin-left: 20rpx;
+	background-color: rgba(255,255,255,0.2);
+	width:450rpx;
+	border-radius: 12rpx;
+	height:60rpx;
+}
+/*.input-container{
+  position:solution;
+  margin: 20rpx auto 20rpx auto;
+}
+.input-tar{
+  height: 100rpx;
+  border-bottom: 3rpx solid #079c9a;
+}
+.input-content{
+  text-align: center;
+  color: #ffffff;
+}*/
+.image-more{
+  height: 35rpx;
+  width: 35rpx;
+  text-align: right;
+}
+.time-display{
+	/*background-color: #aaaaaa;
+	width:225rpx;
+	display: flex;
+	flex-direction: row;
+	padding-left: 35rpx;
+	padding-right: 35rpx;*/
+	text-align: center;
+	width:150rpx;
+}
+#date-display{
+	border-right: solid 2.5rpx #666666;
+	width:300rpx;
+}
+
+#memo-line{
+	height:250rpx;
+}
+#memo-content{
+	height:250rpx;
+	text-align: left;
+	font-size:0.8em;
+}
+
+.publish-button{
+	position: fixed;
+	bottom: 30rpx;
+	color:#FfFFFF;
+	background-color: #079c9a;
+	margin-block-start:95%;
+	font-size: 0.9em;
+	width:90%;
+}

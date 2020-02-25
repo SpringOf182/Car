@@ -1,0 +1,12 @@
+<!--pages/mine/about/about.wxml-->
+<view class='main-container'>
+<view class='top-container'>
+  <image src='/images/logo.png' class='logo-image'></image>
+  <view class='logo-name'>快递顺风车</view>
+  <view class='logo-version'>Version 1.0</view>
+</view>
+  <view class='more-container' catchtap='onUpdateDiaryTap'>
+   	<view class='more-text'>更新日志</view>
+		<image src="/images/mine/right.png" class="right-img"></image>
+	</view>
+</view>

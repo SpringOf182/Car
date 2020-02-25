@@ -1,0 +1,92 @@
+page{
+	background-color: #f0f0f0;
+	height:100%
+}
+.message-container{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+.my-message-container{
+	display: flex;
+	flex-direction: row;
+	float: right;
+}
+.other-message-container{
+	display: flex;
+	flex-direction: row;
+	float: left;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	margin: auto 10rpx auto 10rpx;
+}
+.my-message-time{
+	font-size: 0.8em;
+	color: #666666;
+	margin: auto 10rpx auto auto;
+}
+.my-message-content{
+	margin: auto 10rpx auto auto;
+	width: fit-content;
+	padding:10rpx 20rpx 10rpx 20rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+}
+.other-message-time{
+	font-size: 0.8em;
+	color: #666666;
+	margin: auto auto auto 10rpx;
+}
+.other-message-content{
+	margin: auto auto auto 10rpx;
+	width: fit-content;
+	padding:10rpx 20rpx 10rpx 20rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+}
+.avatar{
+	height:120rpx;
+	width:120rpx;
+	border-radius: 50%;
+  	overflow: hidden;
+}
+
+.send-container{
+	width: 100%;
+	/*position: absolute;*/
+	bottom: 0;
+  display: block;
+  height: 8%;
+  padding: 10rpx 10rpx; 
+  background-color: #fff; 
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee; 
+}
+.send-container input{
+   float:left;
+   width: 66%;
+   height: 100%;
+   line-height: 80rpx;
+   border-bottom: 1rpx solid #ccc;
+   padding:0 10rpx; 
+   font-size: 35rpx;
+   color: #666;
+	}
+.send-container view{
+  display: inline-block; 
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx; 
+  font-size: 60rpx; 
+  text-align: center;
+  color: #999;
+  border: 1rpx solid #ccc;
+  border-radius: 50%;
+  margin-left: 10rpx;
+} 
+.send-container button {
+  float: right;
+  font-size: 35rpx;
+}

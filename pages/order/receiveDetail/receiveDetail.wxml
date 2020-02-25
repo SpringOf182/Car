@@ -1,0 +1,23 @@
+<!--pages/order/receiveMore/receiveMore.wxml-->
+<view class="card-container">
+  <view class="upper-container">
+    <view class="user-container">
+      <image class='userImage' src="{{receiveDetail.image}}"></image>
+      <view class="userName">{{receiveDetail.userName}}</view>
+    </view>
+     <view class="info-container">
+      <view class="info-text">取件点：{{receiveDetail.pickUp}}</view>
+      <view class="info-text">送达点：{{receiveDetail.delivery}}</view>
+      <view class="info-text">验证码：{{receiveDetail.verificationCode}}</view>
+      <view class="info-text">重量：{{receiveDetail.weight}}</view>
+      <view class="info-text">价格：￥{{receiveDetail.price}}</view>
+      <view class="info-text">截止时间：{{receiveDetail.latestTime}}</view>
+      <view class="info-text" catchtap="">发单人：{{receiveDetail.nickName}}</view>
+      <view class="info-text">联系电话：{{receiveDetail.recipentPhoneNumber}}</view>
+      <view class="info-text">备注：{{receiveDetail.memo}}</view>
+    </view>
+  </view>
+  <view class="lower-container">
+  </view>
+  <button class="accomplish-button" catchtap="receive-order">完成</button>
+</view>

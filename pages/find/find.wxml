@@ -1,0 +1,37 @@
+<!--pages/find/find.wxml-->
+<import src="templete/order-find-templete.wxml"/>
+<view class="main-container">
+	<view class="select-container">
+	<view class="screen-text">筛选</view>
+	<view class="screen">
+	<view class="screen-picker">
+		<picker bindchange="bindchangePickUpPoint" range="{{pointArray}}"  value="pickUpIndex" mode="selector">
+			取件点：{{pointArray[pickUpIndex]}}
+      	<image src="/images/icon/more.png" class="image-more"></image>
+   	</picker>
+  </view>
+  <view class="screen-picker">
+    <picker bindchange="bindchangeDeliverPoint" range="{{pointArray}}" value="deliverIndex" mode="selector">
+      送达点：{{pointArray[deliverIndex]}}
+      <image src="/images/icon/more.png" class="image-more"></image>
+    </picker>
+    </view>
+  </view>
+  <view class="screen">
+  <view class="screen-picker" id="pickerC">
+    <picker bindchange="bindchangeCompany" range="{{companyArray}}" value="companyIndex" mode="selector">
+      快递公司：{{companyArray[companyIndex]}}
+      <image src="/images/icon/more.png" class="image-more"></image>
+    </picker>
+    </view>
+		<button catchtap="onSelectTap" class="confirm-button">确认</button>
+	  </view> 
+  </view> 
+  <view class="order-container">
+
+    <block wx:for="{{selectedOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+      <template is="orderItem" data="{{...item}}"/>
+    </block>
+
+  </view>
+</view>
