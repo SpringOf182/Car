@@ -1,43 +1,35 @@
 /* pages/mine/feedback/feedback.wxss */
-textarea {
-  width: 670rpx;
-  height: 300rpx;
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  margin-top: 10rpx;
+.main-container{
+	width:86%;
+	margin:40rpx auto auto auto;
+}
+.title {
+	padding-bottom: 7rpx;
+  font-size: 45rpx;
+  color:  #605D5D ;
+  border-bottom: solid #F9B536 2px;
 }
 .notice {
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  margin-top: 10rpx;
-  font-size: 28rpx;
+	display:block;
+  margin-top: 32rpx;
+  font-size: 32rpx;
   color: #808080;
 }
-.areas {
+textarea {
+  height: 432rpx;
   background-color: #f5f5f5;
   padding: 10rpx;
-  font-size: 32rpx;
+  font-size: 30rpx;
   margin-top: 30rpx;
 }
-
-.title {
-  font-size: 38rpx;
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  margin-top: 10rpx;
-  color: black;
-}
-
 .post {
-  position: relative;
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;
-  background-color: #287af6;
+  background-color:  #F9B536 ;
   color: white;
-  margin-right: 30rpx;
-  margin-left: 30rpx;
-  margin-top: 38rpx;
+  width:60%;
+  margin: 37px auto auto auto;
   border-radius: 8rpx;
   font-weight: bold;
   font-size: 32rpx;

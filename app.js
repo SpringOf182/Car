@@ -47,14 +47,14 @@ App({
         }
       }
     })
-	  setInterval(function () {
+	  /*setInterval(function () {
 		  that.selectPageShufflingText();
 		  console.log("轮播请求1秒触发一次");
-	  }, 1000)
+	  }, 1000)*/
   },
   globalData: {
     acToken: '',
-	 url: "http://2a7350t019.zicp.vip/car/*",
+	 url: "http:",
     trainUrl: '',
     newsList: ''
     // adHost : "http://127.0.0.1:8080"

@@ -1,31 +1,40 @@
 <template name="myRelease">
 	<view class="card-container">
-	<view class="upper-container">
-		<view class="info-container">
-			<view class="info-text">订单号：{{OID}}</view>
-			<view class="info-text">快递点：{{pickUp}}</view>
-			<view class="info-text">验证码：{{verificationCode}}</view>
-			<view class="info-text">价格：￥{{price}}</view>
-			<view class="info-text">备注：{{memo}}</view>
-			<view wx:if="{{state==1}}">
-			<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+		<view class="head">
+			<image src='/images/myOrder/order.png'></image>
+			<view class="status-text" wx:if="{{state==0}}">待接单</view>
+			<view class="status-text" wx:if="{{state==1}}">进行中</view>
+			<view class="status-text" wx:if="{{state==2}}">已完成</view>
+			<view class="status-text" wx:if="{{state==3}}">已失效</view>
+		</view>
+		<view class="upper-container">
+			<view class="info-container">
+				<view class="info-text">订单号：{{OID}}</view>
+				<view class="info-text">快递点：{{pickUp}}</view>
+				<view class="info-text">验证码：{{verificationCode}}</view>
+				<view class="info-text">价格：￥{{price}}</view>
+				<view class="info-text">备注：{{memo}}</view>
+				<view wx:if="{{state==1}}">
+				<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+				</view>
+			</view>
+			<view wx:if="{{state!=0}}">
+				<view class="user-container">
+					<image class='userImage' src="{{image}}" catchtap=""></image>
+					<view class="userName" catchtap="">{{userName}}</view>
+				</view>
 			</view>
 		</view>
-		<view wx:if="{{state==1}}">
-			<view class="user-container">
-			<image class='userImage' src="{{image}}" catchtap=""></image>
-			<view class="userName" catchtap="">{{userName}}</view>
-			</view>
+		
+		<view class="button-container" wx:if="{{state==0}}">
+			<button class="cancel-button" catchtap="cancelOrder" data-orderId="{{OID}}">取消订单</button>
+			<button class="more-button" catchtap="onReleaseMoreTap" data-orderId="{{OID}}">查看详情</button>
 		</view>
-	</view>
-	
-	<view class="statu-container" wx:if="{{state==0}}">
-		<view class="statu-hint">暂未被接收</view>
-		<button class="receive-button" catchtap="cancelOrder" data-orderId="{{OID}}">撤销</button>
-	</view>
 
-	<view class="statu-container" wx:if="{{state==3}}">
-		<view class="statu-hint">订单已撤销或失效</view>
-	</view>
+		<view class="button-container" wx:if="{{state==1}}">
+			<button class="cancel-button" catchtap="cancelOrder" data-orderId="{{OID}}">取消订单</button>
+			<button class="contect-button" catchtap="createChat" data-orderId="{{OID}}">联系接单人</button>
+		</view>
+
 	</view>
 </template>

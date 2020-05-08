@@ -1,8 +1,10 @@
 <!--pages/mine/feedback/feedback.wxml-->
-<view class='title'>请输入反馈信息：</view>
-<view class='notice'>给您带来的不便我们深感抱歉！接收到您的反馈后我们将尽快处理，感谢您的支持！</view>
-<textarea class="areas" placeholder="输入相关信息，不多于600字" maxlength="{{max}}" value="{{feedback}}" bindinput="inputTap">
-</textarea>
-<view class='post' bindtap='onSendFeedbackTap'>
-  反馈
+<view class="main-container">
+	<text class='title'>用户反馈意见栏</text>
+	<text class='notice'>感谢您使用我们的产品!\n我们将在收到您反馈的第一时间处理，如给您造成不便我们深感抱歉！</text>
+	<textarea placeholder="（在此输入相关信息，不超过600字）" maxlength="{{max}}" value="{{feedback}}" bindinput="inputTap">
+	</textarea>
+	<view class='post' bindtap='onSendFeedbackTap'>
+	反馈
+	</view>
 </view>

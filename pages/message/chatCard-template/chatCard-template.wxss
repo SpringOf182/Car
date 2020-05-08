@@ -1,36 +1,36 @@
 .chatCard-container{
-	width:90%;
-	height:120rpx;
-	margin:auto;
 	display: flex;
 	flex-direction: row;
 	background-color: rgba(255,255,255,0.36);
-	margin-top: 10rpx;
-	/*background-color: #fafafa;
-	border-bottom: solid 3rpx #ededed;*/
-	padding: 10rpx;
+	margin-top: 6rpx;
+	padding: 8rpx;
 	border-radius: 12rpx;
 }
+.portrait-box{
+	margin:20rpx;
+}
 .portrait{
-	height:120rpx;
-	width:120rpx;
-	border-radius: 50%;
+	height:106rpx;
+	width:106rpx;
+	border-radius: 5px;
   	overflow: hidden;
 }
 .content-card{
-	margin-left: 20rpx;
-	height:120rpx;
+	margin:30rpx;
+	margin-right: 0;
 }
 .nike-name{
-	margin-top: 10rpx;
+	color:#68645F;
+	padding:10rpx 0;
+	font-size:34rpx;
+}
+.chat-content, .last-time{
+	color: #A29F9D ;
+	font-size:30rpx;
 }
 .chat-content{
 	margin:auto auto 10rpx auto;
-	color: #777777;
-	font-size: 0.85em;
 }
 .last-time{
 	margin:auto 20rpx auto auto;
-	color: #777777;
-	font-size: 0.8em;
 }

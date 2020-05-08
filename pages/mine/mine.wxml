@@ -1,33 +1,32 @@
 <!--pages/mine/mine.wxml-->
-<view class="user-info">
-	<view class="user-content">
-		<view class="userinfo-avatar">
-			<open-data type="userAvatarUrl"></open-data>
+	<view class="logo-box">
+		<image src="/images/logo@3x.png" class="logo-img"></image>
+	</view>
+	<view class="user-info">
+		<view class="user-content">
+			<view class="userinfo-avatar">
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<view class='userinfo-text'>
+				<open-data type="userNickName"></open-data>
+			</view>
 		</view>
-		<view class='userinfo-text'>
-			<open-data type="userNickName"></open-data>
+	</view>
+	<view class="option-container">
+		<view catchtap='onClearCacheTap' class="line">
+			<view class="line-content">清除缓存</view>
+			<image src="/images/mine/right.png" class="right-img"></image>
+		</view>
+		<view catchtap='onFeedbackTap' class="line">
+			<view class="line-content">反馈</view>
+			<image src="/images/mine/right.png" class="right-img"></image>
+		</view>
+		<view catchtap='onAboutTap' class="line">
+			<view class="line-content">关于</view>
+			<image src="/images/mine/right.png" class="right-img"></image>
+		</view>
+		<view catchtap='onHelpTap' class="line">
+			<view class="line-content">帮助</view>
+			<image src="/images/mine/right.png" class="right-img"></image>
 		</view>
 	</view>
-</view>
-<view class="main-container">
-	<view catchtap='onClearCacheTap' class="line">
-		<image src="/images/mine/clear.png" class="line-img"></image>
-		<view class="line-content">清除缓存</view>
-		<image src="/images/mine/right.png" class="right-img"></image>
-	</view>
-	<view catchtap='onFeedbackTap' class="line">
-		<image src="/images/mine/feedback.png" class="line-img"></image>
-		<view class="line-content">反馈</view>
-		<image src="/images/mine/right.png" class="right-img"></image>
-	</view>
-	<view catchtap='onAboutTap' class="line">
-		<image src="/images/mine/about.png" class="line-img"></image>
-		<view class="line-content">关于</view>
-		<image src="/images/mine/right.png" class="right-img"></image>
-	</view>
-	<view catchtap='onHelpTap' class="line">
-		<image src="/images/mine/help.png" class="line-img"></image>
-		<view class="line-content">帮助</view>
-		<image src="/images/mine/right.png" class="right-img"></image>
-	</view>
-</view>

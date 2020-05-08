@@ -2,37 +2,38 @@
 <import src="release-template/release-template.wxml"/>
 <import src="receive-template/receive-template.wxml"/>
 <view class="main-container">
-  <view class="title-container">
-    <view class="choose-container">
-      <view class="title-text" catchtap="onReleaseTap">我的发布</view>
-      <view class="choose-tag" wx:if="{{showRelease}}"> </view>
-    </view>
-    <view class="choose-container">
-      <view class="title-text"catchtap="onReceiveTap">我的接单</view>
-      <view class="choose-tag" wx:if="{{showReceive}}"> </view>
-    </view>
-  </view>
-  <view wx:if="{{showRelease}}">
-	<view wx:if="{{releaseEmpty}}">
-		<view class="list-empty">暂无已发布订单</view>
-		<view class="list-empty">点击下方按钮发布订单↓</view>
+	<view class="title-container">
+			<view class="choose-container">
+				<view class="title-text" catchtap="onReleaseTap">我的发布</view>
+				<view class="choose-tag" wx:if="{{showRelease}}"> </view>
+			</view>
+			<view class="choose-container">
+				<view class="title-text"catchtap="onReceiveTap">我的接单</view>
+				<view class="choose-tag" wx:if="{{showReceive}}"> </view>
+			</view>
 	</view>
-	<view wx:else>
-		<block wx:for="{{releaseOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-			<template is="myRelease" data="{{...item}}"/>
-		</block>
-	 </view>
-	 <button catchtap="onPublishTap" class="publish-button">发布订单</button>
+	<view wx:if="{{showRelease}}">
+			<view wx:if="{{releaseEmpty}}">
+				<image src='/images/myOrder/empty.png' class='empty-image'></image>
+				<view class="list-empty">这里空空如也，快来发布你的订单吧~</view>
+			<button catchtap="onPublishTap" class="publish-button">发布订单</button>
+			</view>
+			<view wx:else>
+				<block wx:for="{{releaseOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+					<template is="myRelease" data="{{...item}}"/>
+				</block>
+			</view>
+		</view>
+		<view wx:if="{{showReceive}}">
+			<view wx:if="{{receiveEmpty}}">
+				<image src='/images/myOrder/empty.png' class='empty-image'></image>
+				<view class="list-empty">这里空空如也，快去订单市场看一看吧~</view>
+			<button catchtap="toOrderMarket" class="publish-button">前往订单市场</button>
+			</view>
+			<view wx:else>
+				<block wx:for="{{receiveOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+					<template is="myReceive" data="{{...item}}"/>
+				</block>
+			</view>
 	</view>
-	<view wx:if="{{showReceive}}">
-		<view wx:if="{{receiveEmpty}}">
-			<view class="list-empty">暂无接收订单</view>
-			<view class="list-empty">前往订单市场查看一下吧~</view>
-		</view>
-		<view wx:else>
-			<block wx:for="{{receiveOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-				<template is="myReceive" data="{{...item}}"/>
-			</block>
-		</view>
-  </view>
 </view>

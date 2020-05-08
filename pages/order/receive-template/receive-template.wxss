@@ -1,59 +1,68 @@
 .card-container{
-  margin:10rpx auto 10rpx auto;
+  margin:30rpx auto 30rpx auto;
   padding:10rpx;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12rpx;
+  background:#FFFFFF;
+  border-radius: 15pt;
   font-size: 0.8em;
-  border-top:  solid 2rpx #038573;
 }
 
 .upper-container{
   display: flex;
   flex-direction: row;
 }
-.receive-detail{
-  margin:auto 20rpx auto auto;
-  width: 100rpx;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1rpx solid #038573;
-  border-radius: 20rpx;
+
+.head{
+	border-bottom: 2px solid #F0ECEC;
+	display: flex;
+	flex-direction: row;
+}
+.head image{
+	width:50rpx;
+	height: 50rpx;
+	text-align: left;
+	margin: auto auto auto 30rpx;
+}
+.status-text{
+	color:  #EA661B ;
+	font-size: 32rpx;
+	padding: 10rpx;
+	margin: auto 30rpx auto auto;
 }
 .user-container{
-  margin:20rpx 20rpx 20rpx 20rpx;
+  margin:40rpx;
   display: flex;
   flex-direction: column;
-  width:16%
 }
 .userImage{
   margin:auto;
   overflow: hidden;
-  height: 100rpx;
-  width: 100rpx;
+  height: 175rpx;
+  width: 175rpx;
   border-radius: 50%;
 }
 .userName{
-  margin:auto;
+  margin:30rpx auto auto auto;
   font-size: 1.2em;
 }
 .info-container{
-  margin:10rpx auto 20rpx 10rpx;
+  margin:30rpx auto 20rpx 30rpx;
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 65%;
 }
 .info-text{
-  margin-bottom: 10rpx;
-  padding: 5rpx;
+  margin-bottom: 15rpx;
+  padding: 15rpx 40rpx;
+  border-radius: 5pt;
+  background-color: #EDEBEB;
+  text-align: left;
 }
 .price-text{
   font-size: 2em;
   margin: auto;
 }
-.accomplish-button{
-  margin:auto 20rpx auto auto;
-  width:20%;
-  background-color: #06a893;
-  color: #ffffff;
-  font-size: 1em;
+.complete-button,.contect-button{
+  margin:auto auto 20rpx auto;
+  font-size: 26rpx;
+  background-color: #F9B536;
 }

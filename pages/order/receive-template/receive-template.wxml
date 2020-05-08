@@ -4,22 +4,31 @@
 </block>
 <block wx:else>
 	<view class="card-container">
-	<view class="receive-detail" catchtap="onReceiveMoreTap" data-orderId="{{OID}}">详情</view>
-	<view class="upper-container">
-		<view class="user-container">
-			<image class='userImage' src="{{image}}"></image>
-			<view class="userName">{{userName}}</view>
+		<view class="head">
+			<image src='/images/myOrder/order.png'></image>
+			<view class="status-text" wx:if="{{state==1}}">进行中</view>
+			<view class="status-text" wx:if="{{state==2}}">已完成</view>
+			<view class="status-text" wx:if="{{state==3}}">已失效</view>
 		</view>
-		<view class="info-container">
-			<view class="info-text">订单号：{{OID}}</view>
-			<view class="info-text">取件点：{{pickUp}}</view>
-			<view class="info-text">验证码：{{verificationCode}}</view>
-			<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+		<view class="upper-container">
+			<view class="user-container">
+				<image class='userImage' src="{{image}}"></image>
+				<view class="userName">{{userName}}</view>
+			</view>
+			<view class="info-container">
+				<view class="info-text">订单号：{{OID}}</view>
+				<view class="info-text">取件点：{{pickUp}}</view>
+				<view class="info-text">验证码：{{verificationCode}}</view>
+				<view class="info-text">备注：{{memo}}</view>
+				<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+			</view>
 		</view>
-	</view>
-	<view class="lower-container" wx:if="{{isComplete}}">
-	<button class="accomplish-button" catchtap="receive-order">完成</button>
-	</view>
+
+		<view class="button-container" wx:if="{{state==1}}">
+			<button class="more-button" catchtap="onReleaseMoreTap" data-orderId="{{OID}}">查看详情</button>
+			<button class="complete-button" catchtap="cancelOrder" data-orderId="{{OID}}">完成订单</button>
+			<button class="contect-button" catchtap="createChat" data-orderId="{{OID}}">联系收件人</button>
+		</view>
 	</view>
 </block>
 </template>
