@@ -1,6 +1,8 @@
 <template name="chatCardItem">
 	<view class="chatCard-container" catchtap="openDialogBox" data-chat="{{senderUID}}">
-		<image src="{{image}}" class="portrait" data-chat="{{senderUID}}"></image>
+		<view class="portrait-box">
+			<image src="{{image}}" class="portrait" data-chat="{{senderUID}}"></image>
+		</view>
 		<view class="content-card" data-chat="{{senderUID}}">
 			<view class="nike-name" data-chat="{{senderUID}}">{{nickName}}</view>
 			<view class="chat-content" data-chat="{{senderUID}}">{{message}}</view>

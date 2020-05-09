@@ -1,5 +1,5 @@
 page{
-	background-color: #f0f0f0;
+	background-color: #EDEBEB;
 	height:100%
 }
 .message-container{
@@ -7,86 +7,74 @@ page{
 	display: flex;
 	flex-direction: column;
 }
-.my-message-container{
+.my-message-container,.other-message-container{
 	display: flex;
 	flex-direction: row;
+	margin:15rpx auto 15rpx auto;
+}
+.my-message-container{
 	float: right;
+	margin-right: 15rpx;
 }
 .other-message-container{
-	display: flex;
-	flex-direction: row;
 	float: left;
+	margin-left: 15rpx;
 }
 .content{
 	display: flex;
 	flex-direction: column;
 	margin: auto 10rpx auto 10rpx;
 }
-.my-message-time{
-	font-size: 0.8em;
+.my-message-time,.other-message-time{
+	font-size: 28rpx;
 	color: #666666;
+	margin-bottom: 5rpx;
+}
+.my-message-time{
 	margin: auto 10rpx auto auto;
+}
+.other-message-time{
+	margin: auto auto auto 10rpx;
+}
+.my-message-content,.other-message-content{
+	font-size: 32rpx;
+	width: fit-content;
+	max-width: 400rpx;
+	padding:15rpx 30rpx 15rpx 30rpx;
+	border-radius: 4pt;
 }
 .my-message-content{
 	margin: auto 10rpx auto auto;
-	width: fit-content;
-	padding:10rpx 20rpx 10rpx 20rpx;
-	background-color: #ffffff;
-	border-radius: 20rpx;
-}
-.other-message-time{
-	font-size: 0.8em;
-	color: #666666;
-	margin: auto auto auto 10rpx;
+	background-color:  #F9B536 ;
 }
 .other-message-content{
 	margin: auto auto auto 10rpx;
-	width: fit-content;
-	padding:10rpx 20rpx 10rpx 20rpx;
 	background-color: #ffffff;
-	border-radius: 20rpx;
 }
 .avatar{
 	height:120rpx;
 	width:120rpx;
-	border-radius: 50%;
+	border-radius: 2pt;
   	overflow: hidden;
+	margin:auto;
 }
 
 .send-container{
-	width: 100%;
-	/*position: absolute;*/
-	bottom: 0;
-  display: block;
-  height: 8%;
-  padding: 10rpx 10rpx; 
-  background-color: #fff; 
-  border-top: 2rpx solid #eee;
-  border-bottom: 2rpx solid #eee; 
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx; 
+  background-color: #f0f0f0; 
 }
 .send-container input{
-   float:left;
-   width: 66%;
-   height: 100%;
-   line-height: 80rpx;
-   border-bottom: 1rpx solid #ccc;
-   padding:0 10rpx; 
+	margin: auto 20rpx auto 15rpx;
+	width:510rpx;
+	background-color: #FFFFFF;
+   padding:20rpx; 
    font-size: 35rpx;
    color: #666;
+  border-radius: 5px;
 	}
-.send-container view{
-  display: inline-block; 
-  width: 80rpx;
-  height: 80rpx;
-  line-height: 80rpx; 
-  font-size: 60rpx; 
-  text-align: center;
-  color: #999;
-  border: 1rpx solid #ccc;
-  border-radius: 50%;
-  margin-left: 10rpx;
-} 
 .send-container button {
-  float: right;
   font-size: 35rpx;
+  margin: auto 15rpx auto auto;
 }

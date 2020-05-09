@@ -12,9 +12,83 @@ Page({
     showReceive:false,
 	 phoneNumber:111,//测试数据
 	 releaseEmpty:false,
-	 receiveEmpty:false,
-    releaseOrderList: [],
-    receiveOrderList: []
+	  receiveEmpty: false,
+    releaseOrderList: [{
+      "image": "/images/test/test1.jpg",
+      "userName": "test1",
+       "OID":"test1",
+       "pickUp":"test1",
+       "price":"test1",
+       "weight":"test1",
+       "verificationCode":"test1",
+       "recipentPhoneNumber":"test1",
+		 "memo":"测试是否换行测试是否换行测试是否换行测试是否换行",
+       "latestTime":"test1",
+       "state":false,
+		 }, {
+        "image": "/images/test/test2.jpg",
+        "userName": "test2",
+        "OID": "test2",
+        "pickUp": "test2",
+        "price": "test2",
+        "weight": "test2",
+        "verificationCode": "test2",
+        "recipentPhoneNumber": "test2",
+        "memo": "test2",
+        "latestTime": "test2",
+        "state": true,
+      }, {
+        "image": "/images/test/test3.jpg",
+        "userName": "test3",
+        "OID": "test3",
+        "pickUp": "test3",
+        "price": "test3",
+        "weight": "test3",
+        "verificationCode": "test3",
+        "recipentPhoneNumber": "test3",
+        "memo": "test3",
+        "latestTime": "test3",
+        "state": true,
+      }],
+    receiveOrderList: [
+      {
+        "OID": "test1",
+        "image": "/images/test/test1.jpg",
+        "userName": "test1",
+        "pickUp": "test1",
+        "delivery": "test1",
+        "weight": "test1",
+        "verificationCode": "test1",
+        "latestTime": "test1",
+        "price": "test1",
+        "memo": "test1",
+		  "state":1,
+      },
+      {
+        "OID": "test2",
+        "image": "/images/test/test2.jpg",
+        "userName": "test2",
+        "pickUp": "test2",
+        "delivery": "test2",
+        "weight": "test2",
+        "verificationCode": "test2",
+        "latestTime": "test1",
+        "price": "test2",
+			"notes": "test2",
+			"state": 2,
+      }, {
+        "OID": "test3",
+        "image": "/images/test/test3.jpg",
+        "userName": "test3",
+        "pickUp": "test3",
+        "delivery": "test3",
+        "weight": "test3",
+        "verificationCode": "test3",
+        "latestTime": "test1",
+        "price": "test3",
+        "notes": "test3",
+			"state": 3,
+		}]
 	},
 
 	/**
@@ -28,8 +102,8 @@ Page({
 		wx.showLoading({
 			title: '加载中',
 			duration: 1000,
-		}),
-		this.onReceiveTap();
+		})
+		//this.onReceiveTap();
 	},
 
   onReleaseTap:function(){
@@ -171,9 +245,9 @@ Page({
    */
   onShow: function () {
 	  if(this.data.showRelease){
-		  this.onReleaseTap()
+		  //this.onReleaseTap()
 	  }else{
-		  this.onReceiveTap()
+		  //this.onReceiveTap()
 	  }
   },
 

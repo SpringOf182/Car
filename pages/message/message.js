@@ -7,14 +7,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-	  chatCardList:[],
+	  chatCardList: [
+		  {
+			  "receiverUID": "0",
+			  "image": "/images/test/test1.jpg",
+			  "nickName": "啊哈！",
+			  "message": "好哒",
+			  "time": "13:40",
+		  },
+		  {
+			  "receiverUID": "idTest2",
+			  "image": "/images/test/test2.jpg",
+			  "nickName": "陌归",
+			  "message": "OK",
+			  "time": "12:24",
+		  },
+		  {
+			  "receiverUID": "idTest3",
+			  "image": "/images/test/test3.jpg",
+			  "nickName": "嘟嘟噜",
+			  "message": "麻烦你啦~",
+			  "time": "2019-11-22",
+		  }
+		],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
 	onLoad: function (options) {
-		this.getChatList();
+		//this.getChatList();
  	},
 
   /**
@@ -28,7 +50,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-	  this.getChatList();
+	  //this.getChatList();
   },
 
   getChatList:function(){

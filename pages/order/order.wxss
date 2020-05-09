@@ -2,17 +2,8 @@
 @import "release-template/release-template.wxss";
 @import "receive-template/receive-template.wxss";
 page{
-  background:
-		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));
-    background-repeat: no-repeat;
-  font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
-}
-.list-empty{
-	margin:auto;
-	text-align: center;
-	font-size: 1.2em;
-	color:antiquewhite;
-	margin-block-start:8%;
+	background-color:  #EDEBEB  ;
+  font-family: Microsoft YaHei;
 }
 .main-container{
   position: absolute;
@@ -22,6 +13,19 @@ page{
   right: 0;
   width:90%;
   margin: auto;
+  text-align: center;
+}
+.empty-image{
+	margin:150rpx auto auto auto;
+	width:350rpx;
+	height:400rpx;
+}
+.list-empty{
+	margin:auto;
+	text-align: center;
+	font-size: 32rpx;
+	color:#383838;
+	margin-block-start:8%;
 }
 .title-container{
   display: flex;
@@ -30,26 +34,26 @@ page{
 .choose-container{
   display: flex;
   flex-direction: column;
-  margin: 10rpx auto 10rpx auto;
+  margin: 20rpx auto 10rpx auto;
   width: 50%;
 }
 .title-text{
+	font-size: 36rpx;
   margin: auto;
-  color: #FfFFFF;
+  color: #383838;
 }
 .choose-tag{
   left: 36rpx;
-  height: 8rpx;
-  width: 42rpx;
-  background-color: #4beb8d;
+  height: 15rpx;
+  width: 250rpx;
+  background-color: #F9B536 ;
   margin: 10rpx auto auto auto;
 }
 .publish-button{
-	position: fixed;
-	bottom: 30rpx;
-	color:#FfFFFF;
-	background-color: #079c9a;
-	margin-block-start:95%;
-	font-size: 0.9em;
-	width:90%;
+	margin-top: 100rpx;
+	color:#383838;
+	background-color:  #F9B536 ;
+	font-size: 36rpx;
+	font-weight: bold;
+	width:450rpx;
 }
