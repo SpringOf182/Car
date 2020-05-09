@@ -2,6 +2,7 @@
 	"pages": [
     "pages/home/home",
 		"pages/find/find",
+
 		"pages/order/order",
 		"pages/order/publish/publish",
 		"pages/order/receiveDetail/receiveDetail",
@@ -10,6 +11,7 @@
 		"pages/mine/mine",
 		"pages/mine/feedback/feedback",
 		"pages/mine/about/about",
+		"pages/find/find",
 		"pages/find/receive/receive"
 	],
 	"window": {
@@ -36,7 +38,7 @@
 				"text": "消息"
 			},
 			{
-				"pagePath": "pages/order/order",
+				"pagePath": "pages/find/find",
 				"iconPath": "images/icon/order.png",
 				"selectedIconPath": "images/icon/order.png",
 				"text": "订单"

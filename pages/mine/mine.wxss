@@ -12,7 +12,6 @@ page{
 	width:450rpx;
 	height:300rpx;
 }
-
 .user-info{
 	height:200rpx;
 	background-color: #ffffff;
