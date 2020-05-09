@@ -12,7 +12,7 @@ Page({
     showReceive:false,
 	 phoneNumber:111,//测试数据
 	 releaseEmpty:false,
-	 receiveEmpty:false,
+	  receiveEmpty: false,
     releaseOrderList: [{
       "image": "/images/test/test1.jpg",
       "userName": "test1",
@@ -22,7 +22,7 @@ Page({
        "weight":"test1",
        "verificationCode":"test1",
        "recipentPhoneNumber":"test1",
-       "memo":"test1",
+		 "memo":"测试是否换行测试是否换行测试是否换行测试是否换行",
        "latestTime":"test1",
        "state":false,
 		 }, {
@@ -62,6 +62,7 @@ Page({
         "latestTime": "test1",
         "price": "test1",
         "memo": "test1",
+		  "state":1,
       },
       {
         "OID": "test2",
@@ -73,7 +74,8 @@ Page({
         "verificationCode": "test2",
         "latestTime": "test1",
         "price": "test2",
-        "notes": "test2",
+			"notes": "test2",
+			"state": 2,
       }, {
         "OID": "test3",
         "image": "/images/test/test3.jpg",
@@ -85,7 +87,8 @@ Page({
         "latestTime": "test1",
         "price": "test3",
         "notes": "test3",
-      }]
+			"state": 3,
+		}]
 	},
 
 	/**
@@ -99,8 +102,8 @@ Page({
 		wx.showLoading({
 			title: '加载中',
 			duration: 1000,
-		}),
-		this.onReceiveTap();
+		})
+		//this.onReceiveTap();
 	},
 
   onReleaseTap:function(){
@@ -242,9 +245,9 @@ Page({
    */
   onShow: function () {
 	  if(this.data.showRelease){
-		  this.onReleaseTap()
+		  //this.onReleaseTap()
 	  }else{
-		  this.onReceiveTap()
+		  //this.onReceiveTap()
 	  }
   },
 

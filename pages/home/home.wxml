@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="page">
+	<view class="page-wrap">
+    <image class="logo" src="../../images/home/home_pic_banner1.png"></image> 
+
+<view class="col">
+ <view class="row" >
+		<view class="rowbt">
+			<button bindtap="order" >
+				<image src="../../images/home/home_icon_order.png"></image>我要发单
+			</button>
+		</view>
+
+		<view class="rowbt">
+			<button bindtap="receive">
+				<image src="../../images/home/home_icon_receive.png"></image>我要接单
+			</button>
+		</view>
+	</view>
+</view>
+
+<view class="col">
+  	<view >
+			<button bindtap="mine">
+				<image src="../../images/home/home_icon_mine.png"></image>我的订单
+			</button>
+		</view>
+</view>
+
+	</view>
+</view>

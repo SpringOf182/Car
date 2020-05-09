@@ -44,19 +44,21 @@
 			<view class="tag-name">联系电话：</view>
 			<input type='number' class='input-tar' placeholder-class='input-content' bindblur='connectNumberBlur' cursor-spacing='20' class="tag-content"></input>
 		</view>
-		<view class="line-container" id="memo-line">
-			<view class="tag-name">备注：</view>
-			<textarea placeholder="输入相关信息，不多于200字" maxlength="{{max}}" bindblur='memoBlur' cursor-spacing='20' class="tag-content"id="memo-content"></textarea>
-		</view>
-		<view class="line-container">
+
+  	<view class="line-container">
 			<view class="tag-name">截止时间：</view>
 				<view class="tag-content">
 				<view class="time-container">
-						<picker bindchange="bindchangeDate" value="{{latestDate}}" start="2019-11-23" end="2030-12-31" mode="date" class="time-display" id="date-display">{{latestDate}}</picker>
-						<picker bindchange="bindchangeTime" value="{{chosenTime}}" start="00:00" end="23:59" mode="time" class="time-display">{{chosenTime}}</picker>
+					<picker bindchange="bindchangeDate" value="{{latestDate}}" start="2019-11-23" end="2030-12-31" mode="date" class="time-display" id="date-display">{{latestDate}}</picker>
+					<picker bindchange="bindchangeTime" value="{{chosenTime}}" start="00:00" end="23:59" mode="time" class="time-display">{{chosenTime}}</picker>
 				</view>
 				</view>
 			</view>
+
+		<view class="line-container" id="memo-line">
+			<view class="tag-name">备注：</view>
+			<textarea placeholder="输入相关信息，不多于200字" maxlength="{{max}}" bindblur='memoBlur' cursor-spacing='20' class="tag-content1"id="memo-content" ></textarea>
+		</view>
 		</view>
 	<button catchtap="onPublishTap" class="publish-button">发布</button>
 </view>

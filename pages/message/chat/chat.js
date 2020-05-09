@@ -12,7 +12,79 @@ Page({
 		portraitUrl: "",
 		nickName: "",
 		currentMessage:"",
-		messageRecord: [],
+		messageRecord: [
+			{
+				receiverID: "idTest1",
+				message: "hey",
+				time: "13:02",
+				isMine:false,
+			},
+			{
+				receiverID: "idTest2",
+				message: "你好",
+				time: "13:04",
+				isMine: true,
+			},
+			{
+				receiverID: "idTest3",
+				message: "我已成功接收你的订单test test test",
+				time: "13:09",
+				isMine: false,
+			},
+			{
+				receiverID: "idTest1",
+				message: "好的！烦请尽快送达~",
+				time: "13:12",
+				isMine: true,
+			},
+			{
+				receiverID: "idTest2",
+				message: "请问你大概什么时间方便呢？",
+				time: "13:34",
+				isMine: false,
+			},
+			{
+				receiverID: "idTest3",
+				message: "四点方便吗？",
+				time: "13:36",
+				isMine: false,
+			},
+			{
+				receiverID: "idTest1",
+				message: "好哒",
+				time: "13:40",
+				isMine: true,
+			},
+			{
+				receiverID: "idTest2",
+				message: "test2",
+				time: "13:45",
+				isMine: false,
+			},
+			{
+				receiverID: "idTest3",
+				message: "test3",
+				time: "13:47",
+				isMine: true,
+			},
+			{
+				receiverID: "idTest1",
+				message: "test1",
+				time: "13:51",
+				isMine: false,
+			},
+			{
+				receiverID: "idTest2",
+				message: "test2",
+				time: "13:54",
+				isMine: true,
+			},
+			{
+				receiverID: "idTest3",
+				message: "test3",
+				time: "13:58",
+				isMine: false,
+			}],
 	},
 
 	/**
@@ -36,7 +108,7 @@ Page({
 		this.setData({
 			senderID: wx.getStorageSync('userID')
 		}) 
-		this.getMessage();
+		//this.getMessage();
 	},
 
 	/**
@@ -127,7 +199,7 @@ Page({
 	sendFeedback:function(data){
 		console.log(data)
 		if(data.Result=="success"){
-			this.getMessage();
+			//this.getMessage();
 			this.setData({
 				currentMessage:"",
 			})

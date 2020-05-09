@@ -1,43 +1,63 @@
 /* pages/order/publish/publish.wxss */
 page{
-  	background:
-		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));
+  	/*background:
+		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));*/
+    background-color: white;
 	background-repeat: no-repeat;
   	font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
   	color: #353535fd;
   text-align: center;
 }
 .main-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 	width: 90%;
 	margin:auto;
-	margin-top:100rpx;
+	margin-top:40rpx;
 }
 .line-container{
 	display: flex;
 	flex-direction: row;
-	height:60rpx;
-	margin-bottom:10rpx;
+	height:80rpx;
+	margin-bottom:20rpx;
 }
 .time-container{
 	display: flex;
 	flex-direction: row;
 }
 .tag-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 	width:200rpx;
-	text-align: left;
-	padding-left: 10rpx;
-	padding-bottom: 2rpx;
-	background-color: rgba(255,255,255,0.2);
-	border-radius: 12rpx;
-	height:60rpx;
+	text-align: center;
+  font-size: 0.8em;
+	padding-left: 20rpx;
+	background-color:  #EDEBEB;
+	border-radius: 35rpx;
+	height:80rpx;
 }
 .tag-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-size: 0.8em;
 	margin-left: 20rpx;
-	background-color: rgba(255,255,255,0.2);
+	background-color: #EDEBEB;
 	width:450rpx;
-	border-radius: 12rpx;
-	height:60rpx;
+	border-radius:35rpx;
+	height:80rpx;
 }
+.tag-content1{
+  font-size: 0.8em;
+	margin-left: 20rpx;
+	background-color: #EDEBEB;
+	width:450rpx;
+	border-radius:35rpx;
+	height:80rpx;
+}
+
 /*.input-container{
   position:solution;
   margin: 20rpx auto 20rpx auto;
@@ -55,6 +75,7 @@ page{
   width: 35rpx;
   text-align: right;
 }
+
 .time-display{
 	/*background-color: #aaaaaa;
 	width:225rpx;
@@ -71,10 +92,10 @@ page{
 }
 
 #memo-line{
-	height:250rpx;
+	height:200rpx;
 }
 #memo-content{
-	height:250rpx;
+	height:200rpx;
 	text-align: left;
 	font-size:0.8em;
 }
@@ -82,9 +103,9 @@ page{
 .publish-button{
 	position: fixed;
 	bottom: 30rpx;
-	color:#FfFFFF;
-	background-color: #079c9a;
+	color:rgb(0, 0, 0);
+	background-color: #F9B536;
 	margin-block-start:95%;
 	font-size: 0.9em;
-	width:90%;
+	width:60%;
 }

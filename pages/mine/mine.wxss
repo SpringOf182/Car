@@ -1,62 +1,60 @@
 /* pages/mine/mine.wxss */
 page{
-	/*background-color: #f4f4f4;
-  background:
-		-webkit-gradient(linear,left top,left bottom,from(#3697af),to(#FfFFFF));
-    background-repeat: no-repeat;*/
   font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+	background-color:#EDEBEB;
+}
+.logo-box{
+	margin:3rpx;
+	text-align: right;
+	background-color:#EEEEEE;
+}
+.logo-img{
+	width:450rpx;
+	height:300rpx;
 }
 
-
-
-
-
-
 .user-info{
-	background-color: #2679d6;
-	height:180rpx;
-	width:100%;
-	color: #ffffff;
+	height:200rpx;
+	background-color: #ffffff;
 }
 .user-content{
 	margin:auto;
-	width: 90%;
 	display: flex;
 	flex-direction: row;
+	position:relative;
+	bottom:80rpx;
 	padding-top: 30rpx;
 }
 .userinfo-avatar{
-	height:130rpx;
-	width:130rpx;
+	height:180rpx;
+	width:180rpx;
+	margin-left:60rpx;
 	border-radius: 50%;
   	overflow: hidden;
 	float:left;
 }
 .userinfo-text{
-	float:left;
 	margin:auto auto auto 30rpx;
 	font-weight: bold;
+	font-size: 30rpx;
 }
-.main-container{
-	width: 90%;
-	margin: auto;
+.option-container{
+	background-color: #ffffff;
+	margin-top: 30rpx;
+	padding-top:30rpx;
 }
 .line{
 	display: flex;
 	flex-direction: row;
-	margin-top: 30rpx;
-	padding-bottom: 25rpx;
-	width: 100%;
+	padding:15rpx;
+	margin:0 auto 20rpx auto;
+	width: 90%;
 	border-bottom: solid 2rpx #cccccc;
-}
-.line-img{
-	height: 50rpx;
-	width: 50rpx;
 }
 .line-content{
 	margin: auto auto 5rpx 20rpx;
 	color: #555555;
-	font-size: 0.8em;
+	font-size: 25rpx;
 }
 .right-img{
 	height: 30rpx;

@@ -1,19 +1,20 @@
 {
 	"pages": [
+    "pages/home/home",
 		"pages/find/find",
 		"pages/order/order",
 		"pages/order/publish/publish",
 		"pages/order/receiveDetail/receiveDetail",
-		"pages/mine/mine",
 		"pages/message/message",
 		"pages/message/chat/chat",
-		"pages/mine/about/about",
+		"pages/mine/mine",
 		"pages/mine/feedback/feedback",
+		"pages/mine/about/about",
 		"pages/find/receive/receive"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarBackgroundColor": "#F9B536",
 		"navigationBarTitleText": "WeChat",
 		"navigationBarTextStyle": "black"
 	},
@@ -22,28 +23,34 @@
 		"selectedColor": "#3344ff",
 		"backgroundColor": "#ffffff",
 		"list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine-selected.png",
+        "text": "主页"
+      },
 			{
-				"pagePath": "pages/find/find",
-				"iconPath": "images/icon/find.png",
-				"selectedIconPath": "images/icon/find-selected.png",
-				"text": "发现"
+				"pagePath": "pages/message/message",
+				"iconPath": "images/icon/message.png",
+				"selectedIconPath": "images/icon/message.png",
+				"text": "消息"
 			},
 			{
 				"pagePath": "pages/order/order",
 				"iconPath": "images/icon/order.png",
-				"selectedIconPath": "images/icon/order-selected.png",
+				"selectedIconPath": "images/icon/order.png",
 				"text": "订单"
 			},
-			{
-				"pagePath": "pages/message/message",
-				"iconPath": "images/icon/message.png",
-				"selectedIconPath": "images/icon/message-selected.png",
-				"text": "消息"
-			},
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "images/icon/order.png",
+        "selectedIconPath": "images/icon/order.png",
+        "text": "发现"
+      },
 			{
 				"pagePath": "pages/mine/mine",
 				"iconPath": "images/icon/mine.png",
-				"selectedIconPath": "images/icon/mine-selected.png",
+				"selectedIconPath": "images/icon/mine.png",
 				"text": "我的"
 			}
 		]
