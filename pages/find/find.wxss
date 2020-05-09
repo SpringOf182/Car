@@ -1,8 +1,11 @@
 /* pages/find/find.wxss */
 @import "templete/order-find-templete.wxss";
 page{
+  /*
   background:
 		-webkit-gradient(linear,left top,left bottom,from(#038573),to(#FfFFFF));
+    */
+    background-color: #EDEBEB;
     background-repeat: no-repeat;
 }
 .main-container{
@@ -11,54 +14,75 @@ page{
   bottom: 0;
   left: 0;
   right: 0;
-  width:90%;
+  width:100%;
   margin: auto;
   font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+  /*background-color: white;*/
+ /* background-color: #EDEBEB;*/
 }
+
 .select-container{
+  background-color: white;
   margin-block-start:7%;
-  border-bottom: solid 4rpx #038573;
+  border-bottom: solid 4rpx #fbfdfd;
   border-radius: 12rpx;
+  height: 25%;
 }
-.select-title{
+
+.select-title{ 
 	display: flex;
 	flex-direction: row;
 }
 .screen-text{
-  font-size: 1.5em;
-  color: #ffffff;
+  font-size: 1.0em;
+  color: #000000;
+  margin-left: 20rpx;
   margin-bottom: 20rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .screen{
   display:flex;
   flex-direction: row;
   font-stretch: ultra-condensed;
   margin:auto;
+
 }
 
 .screen-picker{
   color:#000000;
-  background-color: rgba(255,255,255,0.4);
+  background-color: #EDEBEB;
   text-align: center;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
   margin:10rpx auto 20rpx auto;
   height: 45rpx;
-  width: 48%;
+  width: 32%;
   border-radius: 12rpx;
+  font-size: 12px;
 }
 #pickerC{
 	width: 54%;
 	margin:10rpx auto 20rpx 5rpx;
 }
 .confirm-button{
-	background-color: rgba(255,255,255,0.3);
+  width: 300rpx;
+  height: 70rpx;
+	background-color: #F9B536;
 	font-size: 0.8em;
-	color: #ffffff;
-  margin:10rpx 10rpx 20rpx auto;
+	color: #130b0b;
+  font-weight: 900;
+  margin:10rpx 10rpx 20rpx 30rpx;
 }
 .image-more{
   height: 35rpx;
   width: 35rpx;
   text-align: right;
+}
+.screenbt{
+  display:flex;
+  flex-direction: row;
+
+  justify-content: center; 
+  font-stretch: ultra-condensed;
+  margin:auto;
 }

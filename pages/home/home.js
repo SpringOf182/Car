@@ -62,5 +62,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  receive: function () {
+    wx.switchTab({
+      url: "../find/find"
+    })
+  },
+  order: function () {
+    wx.navigateTo({
+      url: "../order/publish/publish"
+    })
+  },
+  mine: function () {
+    wx.switchTab({
+      url: "../order/order"
+    })
   }
+
 })
