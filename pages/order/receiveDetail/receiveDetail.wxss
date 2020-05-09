@@ -1,8 +1,9 @@
 /* pages/order/receiveMore/receiveMore.wxss */
 page{
-  background:
+ /* background:
 		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: #EDEBEB;
   font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
 }
 
@@ -10,10 +11,10 @@ page{
   width: 90%;
   margin:10rpx auto 10rpx auto;
   padding:10rpx;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   border-radius: 12rpx;
   font-size: 0.8em;
-  border-top:  solid 2rpx #038573;
+ 
 }
 
 .upper-container{
@@ -24,17 +25,19 @@ page{
   margin:20rpx 20rpx 20rpx 20rpx;
   display: flex;
   flex-direction: column;
-  width:16%
+  width:25%;
 }
 .userImage{
-  margin:30rpx auto auto auto;
+  margin:250rpx auto auto auto;
   overflow: hidden;
   height: 100rpx;
   width: 100rpx;
   border-radius: 50%;
 }
 .userName{
-  margin:30rpx auto auto auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 320rpx;
   font-size: 1.2em;
 }
 .info-container{
@@ -44,8 +47,26 @@ page{
   width: 55%;
 }
 .info-text{
+  display: flex;
+  align-items: center;
+  justify-content: right;  
+  margin-bottom: 30rpx;
+  padding: 5rpx;
+	width:100%;
+  font-size: 0.8em;
+	background-color:  #EDEBEB;
+	border-radius: 18rpx;
+	height:60rpx;
+}
+.info-text1{
+  display: flex;
   margin-bottom: 10rpx;
   padding: 5rpx;
+	width:100%;
+  font-size: 0.8em;
+	background-color:  #EDEBEB;
+	border-radius: 18rpx;
+	height:160rpx;
 }
 .price-text{
   font-size: 2em;
@@ -53,8 +74,10 @@ page{
 }
 .accomplish-button{
   margin:auto 20rpx auto auto;
-  width:20%;
-  background-color: #06a893;
-  color: #ffffff;
+  width:30%;
+  margin-right: 30rpx;
+  background-color: #F9B536;
+  color: #000000;
   font-size: 1em;
+  font-weight:  900;
 }

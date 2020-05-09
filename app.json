@@ -1,5 +1,8 @@
 {
 	"pages": [
+    "pages/home/home",
+		"pages/find/find",
+
 		"pages/order/order",
 		"pages/order/publish/publish",
 		"pages/order/receiveDetail/receiveDetail",
@@ -22,6 +25,12 @@
 		"selectedColor": "#3344ff",
 		"backgroundColor": "#ffffff",
 		"list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine-selected.png",
+        "text": "主页"
+      },
 			{
 				"pagePath": "pages/message/message",
 				"iconPath": "images/icon/message.png",
@@ -34,6 +43,12 @@
 				"selectedIconPath": "images/icon/order.png",
 				"text": "订单"
 			},
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "images/icon/order.png",
+        "selectedIconPath": "images/icon/order.png",
+        "text": "发现"
+      },
 			{
 				"pagePath": "pages/mine/mine",
 				"iconPath": "images/icon/mine.png",

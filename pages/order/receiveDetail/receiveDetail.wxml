@@ -6,18 +6,33 @@
       <view class="userName">{{receiveDetail.userName}}</view>
     </view>
      <view class="info-container">
-      <view class="info-text">取件点：{{receiveDetail.pickUp}}</view>
-      <view class="info-text">送达点：{{receiveDetail.delivery}}</view>
-      <view class="info-text">验证码：{{receiveDetail.verificationCode}}</view>
-      <view class="info-text">重量：{{receiveDetail.weight}}</view>
-      <view class="info-text">价格：￥{{receiveDetail.price}}</view>
-      <view class="info-text">截止时间：{{receiveDetail.latestTime}}</view>
-      <view class="info-text" catchtap="">发单人：{{receiveDetail.nickName}}</view>
-      <view class="info-text">联系电话：{{receiveDetail.recipentPhoneNumber}}</view>
-      <view class="info-text">备注：{{receiveDetail.memo}}</view>
+    
+      <view class="info-text">
+       <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;取件点：{{receiveDetail.pickUp}} </text>
+      </view>
+      <view class="info-text" >
+      <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;送达点：{{receiveDetail.delivery}}</text>
+      </view>
+      <view class="info-text" >
+      <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;验证码：{{receiveDetail.verificationCode}}</text>
+      </view>
+      <view class="info-text" >
+       <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;重量：{{receiveDetail.weight}}</text>
+      </view>
+     <!-- <view class="info-text">价格：￥{{receiveDetail.price}}</view>-->
+      <view class="info-text" >
+      <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;截止时间：{{receiveDetail.latestTime}}</text>
+      </view>
+     <!-- <view class="info-text" catchtap="">发单人：{{receiveDetail.nickName}}</view>-->
+      <view class="info-text" >
+       <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;联系电话：{{receiveDetail.recipentPhoneNumber}}</text>
+      </view>
+      <view class="info-text1" >
+       <text decode="{{true}}"> &nbsp; &nbsp;备注：{{receiveDetail.memo}}</text>
+      </view>
     </view>
   </view>
   <view class="lower-container">
   </view>
-  <button class="accomplish-button" catchtap="receive-order">完成</button>
+  <button class="accomplish-button" catchtap="receive-order">接单</button>
 </view>
