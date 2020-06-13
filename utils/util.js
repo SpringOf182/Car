@@ -1,3 +1,5 @@
+var app = getApp();
+
 module.exports = {
 	formatTime: formatTime,
 	httpPOST: httpPOST,

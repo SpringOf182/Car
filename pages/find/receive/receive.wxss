@@ -1,19 +1,16 @@
 /* pages/find/receive/receive.wxss */
 @import "/pages/order/receive-template/receive-template.wxss";
 page{
-	background:
-		-webkit-gradient(linear,left top,left bottom,from(#038573),to(#FfFFFF));
-    background-repeat: no-repeat;
-  font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
+	background-color: #EDEBEB;
+  	font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
 }
 .card-container{
   width: 90%;
   margin:10rpx auto 10rpx auto;
   padding:10rpx;
-  background: rgba(255, 255, 255, 0.2);
+  background:#FFFFFF;
   border-radius: 12rpx;
   font-size: 0.8em;
-  border-top:  solid 2rpx #038573;
 }
 
 .upper-container{
@@ -44,8 +41,10 @@ page{
   width: 55%;
 }
 .info-text{
-  margin-bottom: 10rpx;
-  padding: 5rpx;
+  margin:10rpx auto 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 360rpx;
 }
 .price-text{
   font-size: 2em;
@@ -56,7 +55,7 @@ page{
 	width: 70%;
 	margin: auto;
 	border-radius: 12rpx;
-	background-color: rgba(255,255,255,0.3);
+	background-color:  #EDEBEB ;
 	margin-bottom: 20rpx;
 }
 .input-placeholder{
@@ -67,7 +66,7 @@ page{
 .accomplish-button{
   margin:auto 20rpx auto auto;
   width:20%;
-  background-color: #06a893;
-  color: #ffffff;
+  background-color: #F9B536;
   font-size: 1em;
+  font-weight: 600;
 }

@@ -1,0 +1,35 @@
+/* pages/authorize/authorize.wxss */
+.main-container{
+	text-align: center;
+	width:85%;
+	margin: auto
+}
+.img{
+	margin-top: 100rpx;
+	width:10rem;
+	height:10rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.divider{
+	border:2px solid #444444
+}
+.line1, .line2{
+	text-align:left;
+	margin-left: 20rpx 
+}
+.line1{
+	font-size:18px;
+	color:#555555;
+	margin-top:50rpx ;
+	margin-bottom:20rpx ;
+}
+.line2{
+	font-size:15px;
+	color:#777777;
+	margin-bottom:70rpx ;
+}
+button{
+	margin: auto;
+	border-radius: 100rpx;
+}

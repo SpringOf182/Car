@@ -34,7 +34,22 @@ Page({
 				content: '联系电话不可为空',
 				showCancel:false,
 			})
-		} else {
+		} else {//首先判断是否已实名认证，未认证不可接单
+			var data = {
+				"RequestType": "CheckIdentifier",
+				"UID": wx.getStorageSync('userID'),
+			};
+			wx.showLoading({
+				title: '加载中',
+			})
+			utils.httpPOST(url, data, this.afterVerify);
+		}
+	},
+
+	afterVerify: function (data) {
+		console.log('是否认证？');
+		console.log(data);
+		if (data.result == 'success') {
 			var receiverUID = wx.getStorageSync('userID');
 			var data = {
 				"OID": this.data.receiveDetail.OID,
@@ -45,9 +60,18 @@ Page({
 			console.log("OID:" + this.data.receiveDetail.OID);
 			console.log("recipentPhoneNumber:" + this.data.recipentPhoneNumber);
 			console.log("receiverUID:" + receiverUID);
-			utils.httpPOST(url, data, this.showResult)}
+			utils.httpPOST(url, data, this.showResult)
+		} else {
+			wx.hideLoading();
+			wx.showModal({
+				title: '未认证！',
+				content: '请先前往我的界面进行实名认证，而后方可接单',
+			})
+		}
 	},
-	showResult:function(data){
+
+	showResult: function (data) {
+		wx.hideLoading();
 		if(data.Result=='success'){
 			wx.showToast({
 				title: '接单成功',

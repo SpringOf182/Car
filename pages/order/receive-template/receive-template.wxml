@@ -1,34 +1,29 @@
 <template name="myReceive">
-<block wx:if="{{releaseOrderList}}">
-	<view class="list-empty">您暂未发布订单</view>
-</block>
-<block wx:else>
 	<view class="card-container">
 		<view class="head">
 			<image src='/images/myOrder/order.png'></image>
-			<view class="status-text" wx:if="{{state==1}}">进行中</view>
-			<view class="status-text" wx:if="{{state==2}}">已完成</view>
-			<view class="status-text" wx:if="{{state==3}}">已失效</view>
+			<view class="status-text" wx:if="{{item.state==1}}">进行中</view>
+			<view class="status-text" wx:if="{{item.state==2}}">已完成</view>
+			<view class="status-text" wx:if="{{item.state==3}}">已失效</view>
 		</view>
 		<view class="upper-container">
 			<view class="user-container">
-				<image class='userImage' src="{{image}}"></image>
-				<view class="userName">{{userName}}</view>
+				<image class='userImage' src="{{item.image}}"></image>
+				<view class="userName">{{item.userName}}</view>
 			</view>
 			<view class="info-container">
-				<view class="info-text">订单号：{{OID}}</view>
-				<view class="info-text">取件点：{{pickUp}}</view>
-				<view class="info-text">验证码：{{verificationCode}}</view>
-				<view class="info-text">备注：{{memo}}</view>
-				<view class="info-text">联系电话：{{recipentPhoneNumber}}</view>
+				<view class="info-text">订单号：{{item.OID}}</view>
+				<view class="info-text">取件点：{{item.pickUp}}</view>
+				<view class="info-text">验证码：{{item.verificationCode}}</view>
+				<view class="info-text">备注：{{item.memo}}</view>
+				<view class="info-text">联系电话：{{item.myPhoneNumber}}</view>
 			</view>
 		</view>
 
-		<view class="button-container" wx:if="{{state==1}}">
-			<button class="more-button" catchtap="onReleaseMoreTap" data-orderId="{{OID}}">查看详情</button>
-			<button class="complete-button" catchtap="cancelOrder" data-orderId="{{OID}}">完成订单</button>
-			<button class="contect-button" catchtap="createChat" data-orderId="{{OID}}">联系收件人</button>
+		<view class="button-container" wx:if="{{item.state==1}}">
+			<button class="more-button" catchtap="onReceiveMoreTap" data-orderId="{{item.OID}}">查看详情</button>
+			<button class="complete-button" catchtap="completeOrder" data-orderId="{{item.OID}}">完成订单</button>
+			<button class="contect-button" catchtap="createChatReceive" data-theother="{{item}}">联系收件人</button>
 		</view>
 	</view>
-</block>
 </template>

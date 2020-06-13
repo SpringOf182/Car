@@ -12,7 +12,7 @@ Page({
 		portraitUrl: "",
 		nickName: "",
 		currentMessage:"",
-		messageRecord: [
+		messageRecord: [/*
 			{
 				receiverID: "idTest1",
 				message: "hey",
@@ -84,7 +84,7 @@ Page({
 				message: "test3",
 				time: "13:58",
 				isMine: false,
-			}],
+			}*/],
 	},
 
 	/**

@@ -5,3 +5,15 @@ page{
   background-color:#EDEBEB;
   font-family: Microsoft Yahei,kaiTi_GB2312,SimSun,LiShu;
 }
+.empty-image{
+	margin-left:200rpx;
+	width:350rpx;
+	height:400rpx;
+}
+.list-empty{
+	margin:auto;
+	text-align: center;
+	font-size: 32rpx;
+	color:#383838;
+	margin-block-start:8%;
+}

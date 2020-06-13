@@ -1,4 +1,4 @@
-/* pages/order/publish/publish.wxss */
+/* pages/mine/verify/verify.wxss */
 page{
   	/*background:
 		-webkit-gradient(linear,left top,left bottom,from(#079c9a),to(#FfFFFF));*/
@@ -10,6 +10,7 @@ page{
 }
 .main-container{
   display: flex;
+	flex-direction: column;
   align-items: center;
   justify-content: center;  
 	width: 90%;
@@ -21,10 +22,6 @@ page{
 	flex-direction: row;
 	height:80rpx;
 	margin-bottom:20rpx;
-}
-.time-container{
-	display: flex;
-	flex-direction: row;
 }
 .tag-name{
   display: flex;
@@ -49,58 +46,6 @@ page{
 	border-radius:35rpx;
 	height:80rpx;
 }
-.tag-content1{
-  font-size: 0.8em;
-	margin-left: 20rpx;
-	background-color: #EDEBEB;
-	width:450rpx;
-	border-radius:35rpx;
-	height:80rpx;
-	padding:20rpx;
-}
-
-/*.input-container{
-  position:solution;
-  margin: 20rpx auto 20rpx auto;
-}
-.input-tar{
-  height: 100rpx;
-  border-bottom: 3rpx solid #079c9a;
-}
-.input-content{
-  text-align: center;
-  color: #ffffff;
-}*/
-.image-more{
-  height: 35rpx;
-  width: 35rpx;
-  text-align: right;
-}
-
-.time-display{
-	/*background-color: #aaaaaa;
-	width:225rpx;
-	display: flex;
-	flex-direction: row;
-	padding-left: 35rpx;
-	padding-right: 35rpx;*/
-	text-align: center;
-	width:150rpx;
-}
-#date-display{
-	border-right: solid 2.5rpx #666666;
-	width:300rpx;
-}
-
-#memo-line{
-	height:200rpx;
-}
-#memo-content{
-	height:200rpx;
-	text-align: left;
-	font-size:0.8em;
-}
-
 .publish-button{
 	position: fixed;
 	bottom: 30rpx;

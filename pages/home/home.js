@@ -13,7 +13,23 @@ Page({
    */
   onLoad: function (options) {
 
-  },
+	},
+
+	receive: function () {
+		wx.navigateTo({
+			url: "../find/find"
+		})
+	},
+	order: function () {
+		wx.navigateTo({
+			url: "../order/publish/publish"
+		})
+	},
+	mine: function () {
+		wx.navigateTo({
+			url: "/pages/order/order"
+		})
+	},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -62,22 +78,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  receive: function () {
-    wx.switchTab({
-      url: "../find/find"
-    })
-  },
-  order: function () {
-    wx.navigateTo({
-      url: "../order/publish/publish"
-    })
-  },
-  mine: function () {
-    wx.switchTab({
-      url: "../order/order"
-    })
   }
 
 })

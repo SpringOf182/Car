@@ -8,89 +8,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showRelease:true,
-    showReceive:false,
-	 phoneNumber:111,//测试数据
-	 releaseEmpty:false,
-	  receiveEmpty: false,
-    releaseOrderList: [{
-      "image": "/images/test/test1.jpg",
-      "userName": "test1",
-       "OID":"test1",
-       "pickUp":"test1",
-       "price":"test1",
-       "weight":"test1",
-       "verificationCode":"test1",
-       "recipentPhoneNumber":"test1",
-		 "memo":"测试是否换行测试是否换行测试是否换行测试是否换行",
-       "latestTime":"test1",
-       "state":false,
-		 }, {
-        "image": "/images/test/test2.jpg",
-        "userName": "test2",
-        "OID": "test2",
-        "pickUp": "test2",
-        "price": "test2",
-        "weight": "test2",
-        "verificationCode": "test2",
-        "recipentPhoneNumber": "test2",
-        "memo": "test2",
-        "latestTime": "test2",
-        "state": true,
-      }, {
-        "image": "/images/test/test3.jpg",
-        "userName": "test3",
-        "OID": "test3",
-        "pickUp": "test3",
-        "price": "test3",
-        "weight": "test3",
-        "verificationCode": "test3",
-        "recipentPhoneNumber": "test3",
-        "memo": "test3",
-        "latestTime": "test3",
-        "state": true,
-      }],
-    receiveOrderList: [
-      {
-        "OID": "test1",
-        "image": "/images/test/test1.jpg",
-        "userName": "test1",
-        "pickUp": "test1",
-        "delivery": "test1",
-        "weight": "test1",
-        "verificationCode": "test1",
-        "latestTime": "test1",
-        "price": "test1",
-        "memo": "test1",
-		  "state":1,
-      },
-      {
-        "OID": "test2",
-        "image": "/images/test/test2.jpg",
-        "userName": "test2",
-        "pickUp": "test2",
-        "delivery": "test2",
-        "weight": "test2",
-        "verificationCode": "test2",
-        "latestTime": "test1",
-        "price": "test2",
-			"notes": "test2",
-			"state": 2,
-      }, {
-        "OID": "test3",
-        "image": "/images/test/test3.jpg",
-        "userName": "test3",
-        "pickUp": "test3",
-        "delivery": "test3",
-        "weight": "test3",
-        "verificationCode": "test3",
-        "latestTime": "test1",
-        "price": "test3",
-        "notes": "test3",
-			"state": 3,
-		}]
+		showRelease:true,
+		showReceive:false,
+		phoneNumber:111,//测试数据
+		releaseEmpty:false,
+		receiveEmpty: false,
+		releaseOrderList: [],
+		receiveOrderList:[],
 	},
-
+	
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -99,14 +25,13 @@ Page({
 		this.setData({
 			userID: userID
 		})
-		wx.showLoading({
-			title: '加载中',
-			duration: 1000,
-		})
-		//this.onReceiveTap();
+		this.onReleaseTap();
 	},
 
-  onReleaseTap:function(){
+	onReleaseTap: function () {
+		wx.showLoading({
+			title: '加载中',
+		})
     this.setData({
       showRelease:true,
       showReceive:false,
@@ -121,6 +46,7 @@ Page({
 	},
 
 	getMyRelease(data) {
+		wx.hideLoading();
 		console.log("My Release");
 		console.log(data);
 		var myReleaseList = [];
@@ -145,7 +71,10 @@ Page({
 		console.log(this.data.releaseEmpty)
 	},
 
-  onReceiveTap: function () {
+	onReceiveTap: function () {
+		wx.showLoading({
+			title: '加载中',
+		})
     this.setData({
       showRelease: false,
       showReceive: true,
@@ -160,6 +89,7 @@ Page({
 	},
 
 	getMyReceive(data) {
+		wx.hideLoading();
 		console.log("My Receive");
 		console.log(data);
 		var myReceiveList = [];
@@ -231,6 +161,77 @@ Page({
 				showCancel:false,
 			})
 		}
+	},
+
+	completeOrder:function(){
+		var OID = event.target.dataset.orderid;
+		//var oid = event.target.dataset.orderid;
+		console.log("OID:" + OID);
+		var data = {
+			"OID": OID,
+			"RequestType": "FinishOrder"
+		}
+		console.log("cancel request:" + data);
+		utils.httpPOST(url, data, this.showCompleteResult)
+	},
+	showCompleteResult: function (data) {
+		if (data.Result == "success") {
+			wx.showToast({
+				title: '订单已完成',
+				icon: 'succes',
+				duration: 1000,
+				mask: true
+			})
+		} else {
+			wx.showModal({
+				title: '失败',
+				content: '抱歉，请稍后再试',
+				showCancel: false,
+			})
+		}
+	},
+
+	toOrderMarket:function(){
+		wx.navigateTo({
+			url: '/pages/find/find',
+		})
+	},
+
+	createChatRelease: function (e) {
+		var data = e.target.dataset.theother;
+		console.log("data");
+		console.log(data);
+		var nickName;
+		var data = {
+			"UID": data.recipentUID,
+			"RequestType": "ShowUserInfo"
+		}
+		utils.httpPOST(url, data, function (data) {
+			nickName = data.nickName;
+		});
+		wx.navigateTo({
+			url: '/pages/message/chat/chat?senderUID=' + data.recipentUID + '&image=' + data.image + '&nickName=' + nickName
+		})
+	},
+
+	createChatReceive:function(e){
+		var data = e.target.dataset.theother;
+		//console.log("data");
+		//console.log(data);
+		var nickName;
+		var data = {
+			"UID": data.UID,
+			"RequestType": "ShowUserInfo"
+		}
+		//console.log(data);
+		utils.httpPOST(url, data, function (data) {
+			console.log("回调函数：")
+			console.log(data);
+			nickName = data.nickName;
+		});
+		wx.navigateTo({
+			url: '/pages/message/chat/chat?senderUID=' + data.UID + '&image=' + data.image + '&nickName=' + nickName
+		})
 	},
 
   /**

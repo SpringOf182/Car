@@ -30,19 +30,19 @@
 		</view>
 		<view class="line-container">
 			<view class="tag-name">价格：</view>
-			<input type='digit' class='input-tar' placeholder="例：2.3（单位：元）" placeholder-class='input-content' bindblur='priceBlur' cursor-spacing='20' class="tag-content"></input>
+			<input type='digit' class='input-tar' placeholder="例：2.3（单位：元）" placeholder-class='input-content' bindblur='priceBlur' bindinput='priceBlur' cursor-spacing='20' class="tag-content"></input>
 		</view>
 		<view class="line-container">
 			<view class="tag-name">重量：</view>
-			<input type='digit' class='input-tar' placeholder="例：4.5（单位：kg）" placeholder-class='input-content' bindblur='weightBlur' cursor-spacing='20' class="tag-content"></input>
+			<input type='digit' class='input-tar' placeholder="例：4.5（单位：kg）" placeholder-class='input-content' bindblur='weightBlur' bindinput='weightBlur' cursor-spacing='20' class="tag-content"></input>
 		</view>
 		<view class="line-container">
 			<view class="tag-name">取件码：</view>
-			<input type='text' class='input-tar'  placeholder-class='input-content' bindblur='codeBlur' cursor-spacing='20' class="tag-content"></input>
+			<input type='text' class='input-tar'  placeholder-class='input-content' bindblur='codeBlur' bindinput='codeBlur' cursor-spacing='20' class="tag-content"></input>
 		</view>
 		<view class="line-container">
 			<view class="tag-name">联系电话：</view>
-			<input type='number' class='input-tar' placeholder-class='input-content' bindblur='connectNumberBlur' cursor-spacing='20' class="tag-content"></input>
+			<input type='number' class='input-tar' placeholder-class='input-content' bindblur='connectNumberBlur' bindinput='connectNumberBlur' cursor-spacing='20' class="tag-content"></input>
 		</view>
 
   	<view class="line-container">
@@ -57,7 +57,7 @@
 
 		<view class="line-container" id="memo-line">
 			<view class="tag-name">备注：</view>
-			<textarea placeholder="输入相关信息，不多于200字" maxlength="{{max}}" bindblur='memoBlur' cursor-spacing='20' class="tag-content1"id="memo-content" ></textarea>
+			<textarea placeholder="输入相关信息，不多于200字" maxlength="{{max}}" bindblur='memoBlur' bindinput='memoBlur' cursor-spacing='20' class="tag-content1"id="memo-content" ></textarea>
 		</view>
 		</view>
 	<button catchtap="onPublishTap" class="publish-button">发布</button>

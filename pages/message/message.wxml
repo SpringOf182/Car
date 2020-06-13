@@ -1,5 +1,9 @@
 <import src="chatCard-template/chatCard-template.wxml"/>
 <view class="main-container">
+<block wx:if="{{chatCardList}}==null" class="empty-container">
+	<image src='/images/myOrder/empty.png' class='empty-image'></image>
+				<view class="list-empty">暂时没有消息哦~</view>
+</block>
 	<block wx:for="{{chatCardList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
       <template is="chatCardItem" data="{{...item}}"/>
    </block>

@@ -13,6 +13,10 @@
 		</view>
 	</view>
 	<view class="option-container">
+		<view catchtap='toVerify' class="line">
+			<view class="line-content">实名认证</view>
+			<image src="/images/mine/right.png" class="right-img"></image>
+		</view>
 		<view catchtap='onClearCacheTap' class="line">
 			<view class="line-content">清除缓存</view>
 			<image src="/images/mine/right.png" class="right-img"></image>

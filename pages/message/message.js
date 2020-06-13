@@ -36,7 +36,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
 	onLoad: function (options) {
-		//this.getChatList();
+		this.getChatList();
  	},
 
   /**
@@ -50,7 +50,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-	  //this.getChatList();
+	  this.getChatList();
   },
 
   getChatList:function(){
@@ -61,10 +61,14 @@ Page({
 	  }
 	  console.log("消息列表即将被请求")
 	  console.log(receiverID);
+	  wx.showLoading({
+		  title: '加载中',
+	  })
 	  utils.httpPOST(url,data,this.setChatList)
   },
 
-  setChatList:function(data){
+	setChatList: function (data) {
+		wx.hideLoading();
 	  console.log(data);
 	  this.setData({
 		  chatCardList: data.messageList

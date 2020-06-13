@@ -32,7 +32,7 @@
 			</view>
 			<view wx:else>
 				<block wx:for="{{receiveOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-					<template is="myReceive" data="{{...item}}"/>
+					<template is="myReceive" data="{{item}}"/>
 				</block>
 			</view>
 	</view>

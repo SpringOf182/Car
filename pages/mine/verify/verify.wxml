@@ -1,0 +1,12 @@
+<!--pages/mine/verify/verify.wxml-->
+<view class="main-container">
+	<view class="line-container">
+		<view class="tag-name">姓名：</view>
+		<input type='text' placeholder="请输入您的姓名" bindblur='nameBlur' bindinput='nameBlur' cursor-spacing='20' class="tag-content"></input>
+	</view>
+	<view class="line-container">
+		<view class="tag-name">身份证号：</view>
+		<input type='idcard' placeholder="请输入您的身份证号" bindblur='idBlur' bindinput='idBlur' cursor-spacing='20' class="tag-content"></input>
+	</view>
+	<button catchtap="onPublishTap" class="publish-button">确认</button>
+</view>

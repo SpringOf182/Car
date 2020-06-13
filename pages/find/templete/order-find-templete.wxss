@@ -1,16 +1,13 @@
 .card-container{
-  margin:10rpx auto 10rpx auto;
-  padding:10rpx;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 12rpx;
+  margin:40rpx 50rpx;
+  padding:25rpx;
+  background-color: #fff;
+  border-radius: 12px;
   font-size: 0.8em;
-  border-bottom:  solid 2rpx #038573;
-}
-
-.upper-container{
   display: flex;
   flex-direction: row;
 }
+
 .user-container{
   margin:20rpx 20rpx 20rpx 20rpx;
   display: flex;
@@ -32,20 +29,24 @@
   margin:10rpx auto 20rpx 10rpx;
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 360rpx;
 }
 .info-text{
   margin-bottom: 10rpx;
-  padding: 5rpx;
+  padding: 7rpx 30rpx;
+  background-color: #EDEBEB;
+	border-radius: 5px;
 }
 .price-text{
-  font-size: 2em;
+  font-size: 1.8em;
   margin: auto;
+	font-weight: 500;
 }
 .receive-button{
-  margin:auto 20rpx auto auto;
-  width:20%;
-  background-color: #06a893;
-  color: #ffffff;
-  font-size: 1em;
+	margin:20rpx auto;
+	width:200rpx;
+	background-color: #F9B536;
+	font-size: 1em;
+	font-weight: 600;
+	border-radius: 5px;
 }

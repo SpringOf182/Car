@@ -1,0 +1,7 @@
+<!--pages/authorize/authorize.wxml-->
+<view class="main-container">
+	<image src="/images/logo.png" mode="aspectFill" class="img"/>
+	<view class="line1" >申请获取以下权限：</view>
+	<view class="line2" >获取你的公开信息（昵称、头像等）</view>
+	<button open-type="getUserInfo" type="primary" bindgetuserinfo="userInfoHandler">授权登录</button>
+</view>

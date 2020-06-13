@@ -22,11 +22,10 @@ page{
 }
 
 .select-container{
+	padding:30rpx 20rpx;
   background-color: white;
-  margin-block-start:7%;
   border-bottom: solid 4rpx #fbfdfd;
   border-radius: 12rpx;
-  height: 25%;
 }
 
 .select-title{ 
@@ -45,7 +44,6 @@ page{
   flex-direction: row;
   font-stretch: ultra-condensed;
   margin:auto;
-
 }
 
 .screen-picker{
@@ -65,18 +63,19 @@ page{
 	margin:10rpx auto 20rpx 5rpx;
 }
 .confirm-button{
-  width: 300rpx;
-  height: 70rpx;
+	width: 400rpx;
+	height: 70rpx;
 	background-color: #F9B536;
 	font-size: 0.8em;
 	color: #130b0b;
-  font-weight: 900;
-  margin:10rpx 10rpx 20rpx 30rpx;
+	font-weight: 900;
+	margin:10rpx 10rpx 20rpx 30rpx;
+	border-radius: 12px;
 }
 .image-more{
   height: 35rpx;
   width: 35rpx;
-  text-align: right;
+  margin:auto;
 }
 .screenbt{
   display:flex;

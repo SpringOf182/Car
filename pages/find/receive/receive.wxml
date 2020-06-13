@@ -13,10 +13,10 @@
       <view class="info-text">截止时间：{{receiveDetail.latestTime}}</view>
       <view class="info-text" catchtap="">发单人：{{receiveDetail.releaserName}}</view>
       <view class="info-text">备注：{{receiveDetail.memo}}</view>
+  		<input type="number" placeholder="请输入您的联系电话" bindblur="getPhoneNumber" class="input-phone info-text"></input>
     </view>
   </view>
   <view class="lower-container">
   </view>
-  <input type="number" placeholder="请输入您的联系电话" bindblur="getPhoneNumber" class="input-phone"></input>
   <button class="accomplish-button" catchtap="receiveOrder">完成</button>
 </view>

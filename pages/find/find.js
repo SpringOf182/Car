@@ -36,19 +36,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-	  wx.showLoading({
-		  title: '加载中',
-		  duration:1000,
-	  })
 	  console.log("url")
 	  console.log(url)
 	  var data = {
 		  "RequestType": "OrderMarket",
 	  };
+	  wx.showLoading({
+		  title: '加载中',
+	  })
 	  utils.httpPOST(url,data,this.getOrderMarket);
   },
 
-	getOrderMarket(data){
+	getOrderMarket(data) {
+		wx.hideLoading();
 		console.log("OrderMarket");
 		console.log(data);
 		var orderMarket = [];
@@ -70,9 +70,13 @@ Page({
 		}
 		console.log("Selected Data:");
 		console.log(data);
+		wx.showLoading({
+			title: '加载中',
+		})
 		utils.httpPOST(url, data, this.getSelectedOrder)
 	},
 	getSelectedOrder(data) {
+		wx.hideLoading();
 		console.log("Selected order return value:");
 		console.log(data);
 		var selectedOrder = [];
@@ -112,7 +116,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-	  this.onSelectTap();
+		//this.onSelectTap();
   },
 
   /**

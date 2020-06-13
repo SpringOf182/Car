@@ -49,32 +49,32 @@ Page({
 	priceBlur: function (e) {
 		var price = e.detail.value;
 		this.data.price = price;
-		console.log("price");
-		console.log(price);
+		//console.log("price");
+		//console.log(price);
 	},
 	weightBlur: function (e) {
 		var weight = e.detail.value;
 		this.data.weight = weight;
-		console.log("weight");
-		console.log(weight);
+		//console.log("weight");
+		//console.log(weight);
 	},
 	codeBlur: function (e) {
 		var code = e.detail.value;
 		this.data.verificationCode = code;
-		console.log("verificationCode");
-		console.log(code);
+		//console.log("verificationCode");
+		//console.log(code);
 	},
 	connectNumberBlur: function (e) {
 		var contactNumber = e.detail.value;
 		this.data.contactNumber = contactNumber;
-		console.log("contactNumber");
-		console.log(contactNumber);
+		//console.log("contactNumber");
+		//console.log(contactNumber);
 	},
 	memoBlur: function (e) {
 		var memo = e.detail.value;
 		this.data.memo = memo;
-		console.log("memo");
-		console.log(memo);
+		//console.log("memo");
+		//console.log(memo);
 	},
 	bindchangeDate:function(e){
 		this.setData({
@@ -85,13 +85,14 @@ Page({
 		this.setData({
 			chosenTime: e.detail.value,
 		})
-		this.data.latestTime= this.data.latestDate + " " + this.data.chosenTime+":00",
-		console.log("latestTime")
-		console.log(this.data.latestTime)
+		this.data.latestTime= this.data.latestDate + " " + this.data.chosenTime+":00";
+		//console.log("latestTime")
+		//console.log(this.data.latestTime)
 	},
 
 	onPublishTap:function(){
-		var uid=wx.getStorageSync('userID')
+		var uid = wx.getStorageSync('userID');
+		console.log('uid:'+uid);
 		var data={
 			"RequestType":"PublishOrder",
 			"UID": uid,
@@ -105,9 +106,14 @@ Page({
 			"memo": this.data.memo,
 			"latestTime": this.data.latestTime,
 		}
+		console.log(data);
+		wx.showLoading({
+			title: '加载中',
+		})
 		utils.httpPOST(url,data,this.publishFeedback);
 	},
 	publishFeedback: function (data) {
+		wx.hideLoading();
 		console.log("publishFeedback");
 		console.log(data);
 		if(data.Result){
