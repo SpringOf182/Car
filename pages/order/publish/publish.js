@@ -116,7 +116,7 @@ Page({
 		wx.hideLoading();
 		console.log("publishFeedback");
 		console.log(data);
-		if(data.Result){
+		if(data.Result=='success'){
 			wx.showModal({
 				title: '结果',
 				content: '发布成功!',

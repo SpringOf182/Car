@@ -11,7 +11,7 @@
       <view class="info-text">重量：{{receiveDetail.weight}}</view>
       <view class="info-text">价格：￥{{receiveDetail.price}}</view>
       <view class="info-text">截止时间：{{receiveDetail.latestTime}}</view>
-      <view class="info-text" catchtap="">发单人：{{receiveDetail.releaserName}}</view>
+      <view class="info-text" catchtap="">发单人：{{receiveDetail.nickName}}</view>
       <view class="info-text">备注：{{receiveDetail.memo}}</view>
   		<input type="number" placeholder="请输入您的联系电话" bindblur="getPhoneNumber" class="input-phone info-text"></input>
     </view>

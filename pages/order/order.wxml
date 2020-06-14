@@ -20,7 +20,7 @@
 			</view>
 			<view wx:else>
 				<block wx:for="{{releaseOrderList}}" wx:for-index="index" wx:for-item="item" wx:key="key">
-					<template is="myRelease" data="{{...item}}"/>
+					<template is="myRelease" data="{{item}}"/>
 				</block>
 			</view>
 		</view>

@@ -198,40 +198,45 @@ Page({
 	},
 
 	createChatRelease: function (e) {
-		var data = e.target.dataset.theother;
-		console.log("data");
+		var info = e.target.dataset.theother;
+		console.log("页面传入值：");
 		console.log(data);
-		var nickName;
+		var nickName = "";
 		var data = {
-			"UID": data.recipentUID,
+			"UID": info.recipentUID,
 			"RequestType": "ShowUserInfo"
 		}
-		utils.httpPOST(url, data, function (data) {
-			nickName = data.nickName;
+		//console.log(data);
+		var that = this;
+		utils.httpPOST(url, data, function (res) {
+			console.log("回调函数：")
+			console.log(res.user.nickName);
+			nickName = res.user.nickName;
+			wx.navigateTo({
+				url: '/pages/message/chat/chat?senderUID=' + info.UID + '&image=' + info.image + '&nickName=' + nickName
+			})
 		});
-		wx.navigateTo({
-			url: '/pages/message/chat/chat?senderUID=' + data.recipentUID + '&image=' + data.image + '&nickName=' + nickName
-		})
 	},
 
 	createChatReceive:function(e){
-		var data = e.target.dataset.theother;
-		//console.log("data");
-		//console.log(data);
-		var nickName;
+		var info = e.target.dataset.theother;
+		console.log("页面传入值：");
+		console.log(data);
+		var nickName="";
 		var data = {
-			"UID": data.UID,
+			"UID": info.UID,
 			"RequestType": "ShowUserInfo"
 		}
 		//console.log(data);
-		utils.httpPOST(url, data, function (data) {
+		var that=this;
+		utils.httpPOST(url, data, function (res) {
 			console.log("回调函数：")
-			console.log(data);
-			nickName = data.nickName;
+			console.log(res.user.nickName);
+			nickName = res.user.nickName;
+			wx.navigateTo({
+				url: '/pages/message/chat/chat?senderUID=' + info.UID + '&image=' + info.image + '&nickName=' + nickName
+			})
 		});
-		wx.navigateTo({
-			url: '/pages/message/chat/chat?senderUID=' + data.UID + '&image=' + data.image + '&nickName=' + nickName
-		})
 	},
 
   /**

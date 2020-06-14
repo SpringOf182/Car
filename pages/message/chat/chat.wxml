@@ -26,6 +26,6 @@
 </view>
 </scroll-view>
 <view class="send-container">
-	<input placeholder="请输入聊天内容" type="text" value="{{currentMessage}}" bindblur="inputMessage" class="input-box"></input>
+	<input placeholder="请输入聊天内容" type="text" value="{{currentMessage}}" bindblur="inputMessage" bindinput="inputMessage" class="input-box"></input>
 	<button type="default" bindtap='sendMessage' formType="reset" size="small" button-hover="blue">发送</button>
 </view>

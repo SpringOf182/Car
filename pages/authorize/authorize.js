@@ -33,22 +33,27 @@ Page({
 				// 发送 res.code 到后台换取 openId, sessionKey, unionId
 				if (res.code) {
 					var userInfo, nickName, avatarUrl;
+					var code = res.code;
 					wx.getUserInfo({
 						success: function (res) {
-							userInfo = res.userInfo,
-								nickName = userInfo.nickName,
-								avatarUrl = userInfo.avatarUrl
+							userInfo = res.userInfo;
+							nickName = userInfo.nickName;
+							avatarUrl = userInfo.avatarUrl;
+							//发起网络请求
+							var url = app.globalData.url;
+							var data = {
+								"code": code,
+								"nickName": nickName,
+								"image": avatarUrl,
+								"RequestType": "Login",
+							};
+							console.log(data);
+							wx.showLoading({
+								title: '加载中',
+							})
+							utils.httpPOST(url, data, that.getLoginInfo)
 						}
 					})
-					//发起网络请求
-					var url = app.globalData.url;
-					var data = {
-						"code": res.code,
-						"nickName": nickName,
-						"image": avatarUrl,
-						"RequestType": "Login",
-					};
-					utils.httpPOST(url, data, that.getLoginInfo)
 				} else {
 					console.log('登录失败！' + res.errMsg)
 				}
@@ -56,7 +61,8 @@ Page({
 		})
 	},
 
-	getLoginInfo:function (data) {
+	getLoginInfo: function (data) {
+		wx.hideLoading();
 		console.log("login feedback:" );
 		console.log(data);
 		wx.setStorageSync('userID', data.UID)
