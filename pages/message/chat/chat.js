@@ -112,13 +112,7 @@ Page({
 
 	sendMessage:function(){
 		//var time = utils.formatTime(new Date());
-		if (this.data.feedback == "") {
-			wx.showModal({
-				title: '提示',
-				content: '内容不可为空！',
-				showCancel: false,
-			})
-		} else {
+		if (this.data.currentMessage != "") {
 			Date.now();
 			var time = utils.getTime(new Date);
 			var data = {

@@ -1,7 +1,7 @@
 <template name="myRelease">
 	<view class="card-container">
 		<view class="head">
-			<image src='/images/myOrder/order.png'></image>
+			<image src='/images/myOrder/order.png' mode="aspectFill"></image>
 			<view class="status-text" wx:if="{{item.state==0}}">待接单</view>
 			<view class="status-text" wx:if="{{item.state==1}}">进行中</view>
 			<view class="status-text" wx:if="{{item.state==2}}">已完成</view>
@@ -20,8 +20,8 @@
 			</view>
 			<view wx:if="{{state!=0}}">
 				<view class="user-container">
-					<image class='userImage' src="{{item.image}}" catchtap=""></image>
-					<view class="userName" catchtap="">{{item.userName}}</view>
+					<image class='userImage' src="{{item.image}}"></image>
+					<view class="userName">{{item.userName}}</view>
 				</view>
 			</view>
 		</view>

@@ -1,7 +1,7 @@
 <template name="orderItem">
 <view class="card-container">
 	<view class="user-container">
-		<image class='userImage' src="{{image}}"></image>
+		<image class='userImage' src="{{image}}" mode="aspectFill"></image>
 		<!--<view class="userName">{{nickName}}</view>-->
 	</view>
 

@@ -61,9 +61,9 @@ App({
 	},
 
   globalData: {
-    acToken: '',
-	  url: "http://www.swupanta.top:8080/car/*",
-    trainUrl: '',
-    newsList: ''
+   	acToken: '',
+	  url: "https://www.swupanta.top/car/",
+   	trainUrl: '',
+   	newsList: ''
   },
 })

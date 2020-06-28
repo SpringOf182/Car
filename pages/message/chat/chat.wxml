@@ -15,7 +15,7 @@
 		</view>
 		<view wx:else>
 			<view class="other-message-container">
-				<image src="{{portraitUrl}}" class="avatar"></image>
+				<image src="{{portraitUrl}}" class="avatar" mode="aspectFill"></image>
 				<view class="content">
 					<view class="other-message-time">{{item.time}}</view>
 					<text class="other-message-content">{{item.message}}</text>

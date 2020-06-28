@@ -8,7 +8,7 @@
 		</view>
 		<view class="upper-container">
 			<view class="user-container">
-				<image class='userImage' src="{{item.image}}"></image>
+				<image class='userImage' src="{{item.image}}" mode="aspectFill"></image>
 				<view class="userName">{{item.userName}}</view>
 			</view>
 			<view class="info-container">

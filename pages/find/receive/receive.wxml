@@ -2,7 +2,7 @@
 <view class="card-container">
   <view class="upper-container">
     <view class="user-container">
-      <image class='userImage' src="{{receiveDetail.image}}"></image>
+      <image class='userImage' src="{{receiveDetail.image}}" mode="aspectFill"></image>
       <view class="userName">{{receiveDetail.userName}}</view>
     </view>
      <view class="info-container">

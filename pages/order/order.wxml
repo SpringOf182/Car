@@ -14,7 +14,7 @@
 	</view>
 	<view wx:if="{{showRelease}}">
 			<view wx:if="{{releaseEmpty}}">
-				<image src='/images/myOrder/empty.png' class='empty-image'></image>
+				<image src='/images/myOrder/empty.png' class='empty-image' ></image>
 				<view class="list-empty">这里空空如也，快来发布你的订单吧~</view>
 			<button catchtap="onPublishTap" class="publish-button">发布订单</button>
 			</view>
