@@ -1,7 +1,7 @@
 // pages/order/order.js
 var utils = require("../../utils/util.js");
 var app = getApp();
-var url = app.globalData.url;
+var urlG = app.globalData.url;
 Page({
 
   /**
@@ -42,6 +42,7 @@ Page({
 	  };
 	  console.log("get my release");
 	  console.log(data);
+    var url = urlG + "ShowUserPublishOrder";
 	  utils.httpPOST(url, data, this.getMyRelease)
 	},
 
@@ -85,6 +86,7 @@ Page({
 	  };
 	  console.log("get my Receive");
 	  console.log(data);
+    var url = urlG + "ShowUserAcceptOrder";
 	  utils.httpPOST(url, data, this.getMyReceive)
 	},
 
@@ -144,6 +146,7 @@ Page({
 			"RequestType":"CancelOrder"
 		}
 		console.log("cancel request:"+ data);
+    var url = urlG + "CancelOrder";
 		utils.httpPOST(url,data,this.showCancelResult)
 	},
 	showCancelResult:function(data){
@@ -172,6 +175,7 @@ Page({
 			"RequestType": "FinishOrder"
 		}
 		console.log("cancel request:" + data);
+    var url = urlG + "FinishOrder";
 		utils.httpPOST(url, data, this.showCompleteResult)
 	},
 	showCompleteResult: function (data) {
@@ -208,6 +212,7 @@ Page({
 		}
 		//console.log(data);
 		var that = this;
+    var url = urlG + "ShowUserInfo";
 		utils.httpPOST(url, data, function (res) {
 			console.log("回调函数：")
 			console.log(res.user.nickName);
@@ -229,6 +234,7 @@ Page({
 		}
 		//console.log(data);
 		var that=this;
+    var url = urlG + "ShowUserInfo";
 		utils.httpPOST(url, data, function (res) {
 			console.log("回调函数：")
 			console.log(res.user.nickName);

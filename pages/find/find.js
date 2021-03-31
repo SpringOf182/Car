@@ -1,7 +1,7 @@
 // pages/find/find.js
 var utils = require("../../utils/util.js");
 var app = getApp();
-var url = app.globalData.url;
+var urlG = app.globalData.url;
 
 Page({
 
@@ -37,13 +37,14 @@ Page({
    */
   onLoad: function (options) {
 	  console.log("url")
-	  console.log(url)
+	  console.log(urlG)
 	  var data = {
 		  "RequestType": "OrderMarket",
 	  };
 	  wx.showLoading({
 		  title: '加载中',
-	  })
+		})
+		var url = urlG+"OrderMarket";
 	  utils.httpPOST(url,data,this.getOrderMarket);
   },
 
@@ -73,6 +74,7 @@ Page({
 		wx.showLoading({
 			title: '加载中',
 		})
+		var url = urlG+"OrderSelect";
 		utils.httpPOST(url, data, this.getSelectedOrder)
 	},
 	getSelectedOrder(data) {

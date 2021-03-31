@@ -1,7 +1,7 @@
 // pages/message/chat/chat.js
 var utils = require("../../../utils/util.js");
 var app = getApp();
-var url = app.globalData.url;
+var urlG = app.globalData.url;
 Page({
 
 	/**
@@ -62,6 +62,7 @@ Page({
 			"RequestType": "GetMessage",
 		}
 		console.log(data);
+    var url = urlG + "GetMessage";
 		utils.httpPOST(url, data, this.reverseMessage);
 	},
 
@@ -123,6 +124,7 @@ Page({
 				"RequestType": "SendMessage",
 			}
 			console.log(data)
+			var url = urlG + "SendMessage";
 			utils.httpPOST(url, data, this.sendFeedback)
 		}
 	},

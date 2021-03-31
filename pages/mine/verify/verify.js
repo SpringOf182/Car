@@ -1,7 +1,7 @@
 // pages/mine/verify/verify.js
 var utils = require("../../../utils/util.js");
 var app = getApp();
-var url = app.globalData.url;
+var urlG = app.globalData.url;
 Page({
 
 	/**
@@ -43,6 +43,7 @@ Page({
 		wx.showLoading({
 			title: '加载中',
 		})
+    var url = urlG + "Identifier";
 		utils.httpPOST(url, data, this.verified);
 	},
 

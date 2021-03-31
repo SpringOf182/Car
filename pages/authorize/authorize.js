@@ -40,7 +40,7 @@ Page({
 							nickName = userInfo.nickName;
 							avatarUrl = userInfo.avatarUrl;
 							//发起网络请求
-							var url = app.globalData.url;
+							var url = app.globalData.url+"Login";
 							var data = {
 								"code": code,
 								"nickName": nickName,
